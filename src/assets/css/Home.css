@@ -1,23 +1,49 @@
-/* Home.css */
-body{
+/* Global Styles */
+:root{
+    --gradient-bg: linear-gradient(
+            90deg,
+            hsl(120deg 100% 0%) 0%,
+            hsl(137deg 35% 7%) 8%,
+            hsl(150deg 47% 10%) 15%,
+            hsl(161deg 82% 12%) 23%,
+            hsl(164deg 97% 15%) 31%,
+            hsl(164deg 97% 20%) 39%,
+            hsl(164deg 94% 25%) 46%,
+            hsl(164deg 94% 25%) 54%,
+            hsl(164deg 97% 20%) 62%,
+            hsl(164deg 97% 15%) 69%,
+            hsl(161deg 82% 12%) 77%,
+            hsl(150deg 47% 10%) 85%,
+            hsl(137deg 35% 7%) 92%,
+            hsl(120deg 100% 0%) 100%
+    );
+}
+body {
     max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
-    background: black;
+    background-color: black;
 }
-/*LOGO*/
+.home-container{
+    background-image: var(--gradient-bg);
+    color: white;
+}
+
+/* Logo */
 .logo {
     height: 6em;
     padding: 1.5em;
     will-change: filter;
     transition: filter 300ms;
 }
+
 @media (prefers-reduced-motion: no-preference) {
     .logo {
         animation: logo-spin infinite 2s linear;
     }
 }
+
 @keyframes logo-spin {
     from {
         transform: rotate(0deg);
@@ -27,28 +53,20 @@ body{
     }
 }
 
-
-
-.home-container {
-    background-image: var(--gradient-bg);
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    );;
-}
+/* Header */
 .header {
     background-color: #000000;
     color: #fff;
     text-align: center;
     padding: 10px 20px; /* Add padding */
 }
-/*Navbar*/
+
+/* Navbar */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 10px 5px rgba(0, 0, 0, 0.6); /* Add box shadow to the bottom */
-
 }
 
 .nav-title {
@@ -81,6 +99,7 @@ body{
     filter: drop-shadow(0 0 2px #61dafb); /* Drop shadow effect on hover */
 }
 
+/* Main Content */
 .main-content {
     padding: 20px 0;
 }
@@ -88,6 +107,8 @@ body{
 .main-content h2 {
     margin-bottom: 10px;
 }
+
+/* Main Content Images */
 .main-content-images {
     display: flex;
     flex-wrap: wrap;
@@ -95,10 +116,23 @@ body{
 }
 
 .main-content-images img {
-    width: calc(100% - 10px);
-    margin-bottom: 20px;
+    width: 48%; /* Adjust width to fit two images per row */
+    margin: 10px; /* Adjust margin for spacing */
 }
 
+/* Image Container */
+.image-container {
+    width: 50%; /* Make the image fill its column */
+}
+
+/* Image Text Container */
+.image-text-container {
+    padding-top: 3em;
+    text-align: start;
+    width: calc(50% - 10px); /* Adjust width to leave space between columns */
+}
+
+/* Footer */
 .footer {
     color: #fff;
     padding: 20px 0;
