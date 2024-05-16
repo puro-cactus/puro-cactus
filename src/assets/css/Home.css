@@ -95,7 +95,7 @@ body{
 }
 
 .main-content-images img {
-    width: calc(100% - 10px); /* Adjust the width as needed */
+    width: calc(100% - 10px);
     margin-bottom: 20px;
 }
 

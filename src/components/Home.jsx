@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer'; // Import useInView hook
 import { motion } from 'framer-motion'; // Import motion from Framer Motion
 import '../assets/css/Home.css';
