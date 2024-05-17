@@ -4,14 +4,21 @@ import Home from './components/Home.jsx'
 import './assets/css/index.css'
 import './assets/css/App.css'
 import './assets/css/Home.css'
+import AboutUs from "./components/AboutUs.jsx";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-      <>
 
-          <Home />
-      </>
+    <React.StrictMode>
+        <Route path="/about-us" component={AboutUs} />
 
-  </React.StrictMode>,
+        <>
+
+            <Home/>
+            <AboutUs/>
+
+
+        </>
+
+    </React.StrictMode>,
 )
