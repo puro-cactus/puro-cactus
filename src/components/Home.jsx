@@ -1,39 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import { useInView } from 'react-intersection-observer'; // Import useInView hook
-import { motion } from 'framer-motion'; // Import motion from Framer Motion
+import React, {useEffect, useState} from 'react';
+import {motion} from 'framer-motion'; // Import motion from Framer Motion
 import '../assets/css/Home.css';
 
 function Home() {
-    const [isFirstImageVisible, setFirstImageVisible] = useState(false);
-    const [isSecondImageVisible, setSecondImageVisible] = useState(false);
-    const [isThirdImageVisible, setThirdImageVisible] = useState(false);
-    const [isFourthImageVisible, setFourthImageVisible] = useState(false);
-
-    const { ref: firstInViewRef, inView: firstInView } = useInView({ threshold: 0.5 }); // Adjust threshold
-    const { ref: secondInViewRef, inView: secondInView } = useInView({ threshold: 0.5 }); // Adjust threshold
-    const { ref: thirdInViewRef, inView: thirdInView } = useInView({ threshold: 0.5 }); // Adjust threshold
-    const { ref: fourthInViewRef, inView: fourthInView } = useInView({ threshold: 0.5 }); // Adjust threshold
+    const [scrollValue, setScrollValue] = useState(window.scrollY);
 
     useEffect(() => {
-        setFirstImageVisible(firstInView);
-    }, [firstInView]);
+        const handleScroll = () => {
+            setScrollValue(window.scrollY);
+            console.log(window.scrollY.valueOf())
+        };
 
-    useEffect(() => {
-        setSecondImageVisible(secondInView);
-    }, [secondInView]);
+        window.addEventListener('scroll', handleScroll);
 
-    useEffect(() => {
-        setThirdImageVisible(thirdInView);
-    }, [thirdInView]);
-
-    useEffect(() => {
-        setFourthImageVisible(fourthInView);
-    }, [fourthInView]);
-
-    console.log("First image in view:", firstInView);
-    console.log("Second image in view:", secondInView);
-    console.log("Third image in view:", thirdInView);
-    console.log("Fourth image in view:", fourthInView);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <div className="home-container">
@@ -90,9 +73,9 @@ function Home() {
                 <div className="row">
                     <motion.div className="column image-container"
                                 initial={{x: '-200vw', opacity: 0}} // Initial position from the left side
-                                animate={{x: 100, opacity: isFirstImageVisible ? 1 : 0.5}} // Animate from left side
+                                animate={{x: scrollValue >= 0 ? 100 : '-200vw', opacity: scrollValue >= 0 ? 1 : 0.5}}
                                 transition={{duration: 1.2}}
-                                ref={firstInViewRef}
+
                     >
                         <motion.img
                             src="../../public/xeroscape.JPG"
@@ -100,27 +83,29 @@ function Home() {
                             className="animated-image"
                         />
                     </motion.div>
-                    <motion.div className="column space image-text-container"
+                    <motion.div className="column image-text-container"
                                 initial={{x: '200vw', opacity: 0}} // Initial position from the left side
-                                animate={{x: 100, opacity: isFirstImageVisible ? 1 : 0.5}} // Animate from left side
+                                animate={{x: scrollValue >= 0 ? 100 : '200vw', opacity: scrollValue >= 0 ? 1 : 0.5}}
                                 transition={{duration: 1.2}}
                     >
-                        <span>Text for the image</span>
+                        <span>Xeroscape: A serene landscape featuring drought-resistant plants and succulents, arranged in a harmonious composition. The muted color palette and geometric patterns create a tranquil oasis that requires minimal maintenance, perfect for arid climates.</span>
+
                     </motion.div>
                 </div>
             </div>
 
             <div className={"space"}>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae natus
-                    repellendus! Ducimus est iusto modi numquam odit, reprehenderit rerum.</p>
+          <span>
+    Xeriscaping is a water-efficient landscaping method that utilizes drought-tolerant plants and sustainable irrigation techniques to conserve water and promote biodiversity. By incorporating native plants and minimizing lawn areas, xeriscaping helps conserve water, enhance soil health, and support local ecosystems.
+</span>
+
             </div>
             <div className="main-content">
                 <div className="row">
                     <motion.div className="column image-container"
-                                initial={{x: '200vw', opacity: 0}} // Initial position from the right side
-                                animate={{x: 100, opacity: isSecondImageVisible ? 1 : 0.5}} // Animate from left side
+                                initial={{x: '-200vw', opacity: 0}} // Initial position from the right side
+                                animate={{x: scrollValue > 250 ? 100 : '-200vw', opacity: scrollValue > 250 ? 1 : 0.5}}
                                 transition={{duration: 1.2}}
-                                ref={secondInViewRef}
                     >
                         <motion.img
                             src="../../public/artificial-grass.jpeg"
@@ -128,12 +113,63 @@ function Home() {
                             className="animated-image"
                         />
                     </motion.div>
-                    <motion.div className="column space image-text-container"
-                                initial={{x: '-200vw', opacity: 0}} // Initial position from the right side
-                                animate={{x: 100, opacity: isSecondImageVisible ? 1 : 0.5}} // Animate from left side
+                    <motion.div className="column image-text-container"
+                                initial={{x: '200vw', opacity: 0}} // Initial position from the right side
+                                animate={{
+                                    x: scrollValue > 250.000 ? 100 : '200vw',
+                                    opacity: scrollValue > 250.000 ? 1 : 0.5
+                                }}
                                 transition={{duration: 1.4}}
                     >
-                        <span>Text for the image</span>
+                        <span>Artificial Grass: A lush green lawn crafted from high-quality synthetic turf, offering the look and feel of natural grass without the need for watering or mowing. Perfectly manicured and evergreen, it provides a vibrant and low-maintenance solution for residential and commercial landscapes.</span>
+
+                    </motion.div>
+                </div>
+            </div>
+
+            <div className={"space"}>
+           <span>
+    Artificial grass is an eco-friendly landscaping solution that conserves water, reduces chemical usage, and minimizes carbon emissions. It requires no watering, pesticides, or fertilizers, making it an environmentally sustainable alternative to traditional lawns.
+</span>
+
+            </div>
+
+            <div className="main-content">
+                <div className="row">
+                    <motion.div
+                        className="column image-container"
+                        initial={{x: '-200vw', opacity: 0}}
+                        animate={{
+                            x: scrollValue > 900
+
+                                ? 100 : '-200vw', opacity: scrollValue > 900
+
+                                ? 1 : 0.5
+                        }}
+                        transition={{duration: .75}}
+                    >
+                        <motion.img
+                            src="../../public/Beautiful-Yard.jpeg"
+                            alt="3rd image"
+                            className="animated-image"
+                            style={{
+                                opacity: scrollValue > 900 ? 1 : 0.5
+                            }}
+                        />
+                    </motion.div>
+                    <motion.div
+                        className="column image-text-container"
+                        initial={{x: '200vw', opacity: 0}}
+                        animate={{
+                            x: scrollValue > 900
+
+                                ? 100 : '200vw', opacity: scrollValue > 990
+                                ? 1 : 0.5
+                        }}
+                        transition={{duration: .75}}
+                    >
+                        <span>Beautiful Yard: A picturesque garden brimming with vibrant flowers, lush foliage, and winding pathways. Each corner reveals a new burst of color and texture, inviting exploration and relaxation. This meticulously curated landscape is a testament to the beauty of nature and the artistry of skilled gardeners.</span>
+
                     </motion.div>
                 </div>
             </div>
@@ -142,37 +178,16 @@ function Home() {
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae natus
                     repellendus! Ducimus est iusto modi numquam odit, reprehenderit rerum.</p>
             </div>
-            <div className="main-content">
-                <div className="row">
-                    <motion.div className="column image-container"
-                                initial={{x: '-200vw', opacity: 0}} // Initial position from the left side
-                                animate={{x: 100, opacity: isThirdImageVisible ? 1 : 0.5}} // Animate from left side
-                                transition={{duration: 1.2}}
-                                ref={thirdInViewRef}
-                    >
-                        <motion.img
-                            src="../../public/Beautiful-Yard.jpeg"
-                            alt="3rd image"
-                            className="animated-image"
-                        />
-                    </motion.div>
-                    <motion.div className="column space image-text-container"
-                                initial={{x: '200vw', opacity: 0}} // Initial position from the right side
-                                animate={{x: 100, opacity: isThirdImageVisible ? 1 : 0.5}} // Animate from left side
-                                transition={{duration: 1.2}}
-                    >
-                        <span>Text for the image</span>
-                    </motion.div>
-                </div>
-            </div>
 
             <div className="main-content">
                 <div className="row">
                     <motion.div className="column image-container"
-                                initial={{x: '200vw', opacity: 0}} // Initial position from the right side
-                                animate={{x: 100, opacity: isFourthImageVisible ? 1 : 0.5}} // Animate from left side
+                                initial={{x: '-200vw', opacity: 0}} // Initial position from the right side
+                                animate={{
+                                    x: scrollValue > 1350 ? 100 : '-200vw',
+                                    opacity: scrollValue > 1350 ? 1 : 0.5
+                                }}
                                 transition={{duration: 1.2}}
-                                ref={fourthInViewRef}
                     >
                         <motion.img
                             src="../../public/cactus-garden.jpeg"
@@ -180,12 +195,12 @@ function Home() {
                             className="animated-image"
                         />
                     </motion.div>
-                    <motion.div className="column space image-text-container"
-                                initial={{x: '-200vw', opacity: 0}} // Initial position from the right side
-                                animate={{x: 100, opacity: isFourthImageVisible ? 1 : 0.5}} // Animate from left side
+                    <motion.div className="column   image-text-container"
+                                initial={{x: '200vw', opacity: 0}} // Initial position from the right side
+                                animate={{x: scrollValue > 1350 ? 100 : '200vw', opacity: scrollValue > 1350 ? 1 : 0.5}}
                                 transition={{duration: 1.4}}
                     >
-                        <span>Text for the image</span>
+                        <span>Cactus Garden: A striking display of desert flora, featuring an array of cacti and succulents in various shapes and sizes. Against a backdrop of sandy soil and rugged rocks, these hardy plants thrive in arid conditions, showcasing their unique forms and resilience.</span>
                     </motion.div>
                 </div>
             </div>

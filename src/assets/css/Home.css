@@ -20,11 +20,18 @@
 }
 
 body {
-    max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
     background-color: black;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        max-width: 1280px;
+        overflow-x: hidden; /* Disable horizontal scrolling on mobile */
+
+    }
 }
 
 .home-container {
@@ -118,13 +125,24 @@ body {
 }
 
 .main-content img {
-    width: 400px;
-    aspect-ratio: auto;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px; /* Add margin between images */
 }
 
 /* Image Container */
 .image-container {
     width: 50%; /* Make the image fill its column */
+}
+
+@media screen and (max-width: 768px) {
+    .image-container {
+        width: 100%; /* Change the width to full width on smaller screens */
+    }
+
+    .column {
+        width: 100%;
+    }
 }
 
 /* Image Text Container */
@@ -133,9 +151,15 @@ body {
     justify-content: center;
 
 }
+.image-text-container span{
+    max-width: 69%;
+
+}
+
 
 /* Define a container for the row */
 .row {
+    width: 100%;
     display: flex; /* Use Flexbox */
     flex-wrap: nowrap; /* Prevent wrapping to next line */
     justify-content: flex-start; /* Align items along the main axis (horizontally) */
@@ -147,6 +171,7 @@ body {
     width: 100%
 }
 
+
 /* Footer */
 .footer {
     color: #fff;
@@ -154,5 +179,5 @@ body {
     text-align: center;
 }
 .space{
-    margin-left: 150px;
+    /*margin-left: 150px;*/
 }
