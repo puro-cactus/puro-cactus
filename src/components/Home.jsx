@@ -70,8 +70,8 @@ function Home() {
             {/* Close main-content here */}
 
             <div className="main-content">
-                <div className="row">
-                    <motion.div className="column image-container"
+                <div className="row content-card">
+                    <motion.div className="column  image-container"
                                 initial={{x: '-200vw', opacity: 0}} // Initial position from the left side
                                 animate={{x: scrollValue >= 0 ? 100 : '-200vw', opacity: scrollValue >= 0 ? 1 : 0.5}}
                                 transition={{duration: 1.2}}
@@ -95,13 +95,13 @@ function Home() {
             </div>
 
             <div className={"space"}>
-          <span>
-    Xeriscaping is a water-efficient landscaping method that utilizes drought-tolerant plants and sustainable irrigation techniques to conserve water and promote biodiversity. By incorporating native plants and minimizing lawn areas, xeriscaping helps conserve water, enhance soil health, and support local ecosystems.
-</span>
+            <span>
+                Xeriscaping is a water-efficient landscaping method that utilizes drought-tolerant plants and sustainable irrigation techniques to conserve water and promote biodiversity. By incorporating native plants and minimizing lawn areas, xeriscaping helps conserve water, enhance soil health, and support local ecosystems.
+            </span>
 
             </div>
             <div className="main-content">
-                <div className="row">
+                <div className="row content-card">
                     <motion.div className="column image-container"
                                 initial={{x: '-200vw', opacity: 0}} // Initial position from the right side
                                 animate={{x: scrollValue > 250 ? 100 : '-200vw', opacity: scrollValue > 250 ? 1 : 0.5}}
@@ -135,7 +135,7 @@ function Home() {
             </div>
 
             <div className="main-content">
-                <div className="row">
+                <div className="row content-card">
                     <motion.div
                         className="column image-container"
                         initial={{x: '-200vw', opacity: 0}}
@@ -175,12 +175,14 @@ function Home() {
             </div>
 
             <div className={"space"}>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae natus
-                    repellendus! Ducimus est iusto modi numquam odit, reprehenderit rerum.</p>
+                <span>
+    A cactus garden is a low-maintenance and water-efficient landscaping option that thrives in arid climates. Cacti are well-adapted to dry conditions, requiring minimal water and maintenance while providing unique aesthetic appeal. Cactus gardens contribute to biodiversity by providing habitat for desert wildlife and promoting sustainable landscaping practices.
+</span>
+
             </div>
 
             <div className="main-content">
-                <div className="row">
+                <div className="row content-card">
                     <motion.div className="column image-container"
                                 initial={{x: '-200vw', opacity: 0}} // Initial position from the right side
                                 animate={{

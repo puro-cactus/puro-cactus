@@ -127,7 +127,6 @@ body {
 .main-content img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 20px; /* Add margin between images */
 }
 
 /* Image Container */
@@ -148,14 +147,23 @@ body {
 /* Image Text Container */
 .image-text-container {
     display: flex;
-    justify-content: center;
-
-}
-.image-text-container span{
-    max-width: 69%;
+    justify-content: start;
+    padding-left: 20px;
 
 }
 
+.image-text-container span {
+    max-width: 50%;
+
+}
+
+.content-card {
+    /*background-color: #888888;*/
+    background: rgba(0,0,0,0.5);
+    border: #333333 2px solid;
+    box-shadow: 5px 5px 8px #1b1b1b,
+    -5px -5px 8px #272727;
+}
 
 /* Define a container for the row */
 .row {
@@ -178,6 +186,7 @@ body {
     padding: 20px 0;
     text-align: center;
 }
-.space{
+
+.space {
     /*margin-left: 150px;*/
 }
