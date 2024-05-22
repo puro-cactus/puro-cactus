@@ -30,7 +30,6 @@ body {
     body {
         max-width: 1280px;
         overflow-x: hidden; /* Disable horizontal scrolling on mobile */
-
     }
 }
 
@@ -149,20 +148,17 @@ body {
     display: flex;
     justify-content: start;
     padding-left: 20px;
-
 }
 
 .image-text-container span {
     max-width: 50%;
-
 }
 
 .content-card {
     /*background-color: #888888;*/
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     border: #333333 2px solid;
-    box-shadow: 5px 5px 8px #1b1b1b,
-    -5px -5px 8px #272727;
+    box-shadow: 5px 5px 8px #1b1b1b, -5px -5px 8px #272727;
 }
 
 /* Define a container for the row */
@@ -176,9 +172,8 @@ body {
 
 /* Define styles for the columns */
 .column {
-    width: 100%
+    width: 100%;
 }
-
 
 /* Footer */
 .footer {
@@ -189,4 +184,37 @@ body {
 
 .space {
     /*margin-left: 150px;*/
+}
+
+/* New styles for the overlay effect */
+.overlay-container {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.overlay-hero {
+    border-image: fill 1 linear-gradient(hsl(240 100% 50% / .3), hsl(112 74% 46% / .3));
+}
+
+.overlay-container img {
+    width: 100%;
+    height: auto;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: to make the text more readable */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Adjust width as needed */
+}
+
+.text-overlay h1 {
+    margin: 0 0 20px 0;
+    font-size: 2em;
 }

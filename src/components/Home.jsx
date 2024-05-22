@@ -17,8 +17,9 @@ function Home() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-
+    console.log(window.scrollY.valueOf());
     return (
+
         <div className="home-container">
             <header className="header">
                 <div className="navbar">
@@ -30,7 +31,7 @@ function Home() {
                     <nav className="nav">
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="AboutUS.jsx">About Us</a></li>
+                            <li><a href="#">About Us</a></li>
                             <li><a href="#">Services</a></li>
                             <li><a href="#">Contact</a></li>
                         </ul>
@@ -39,8 +40,9 @@ function Home() {
             </header>
 
             <div className="main-content">
-                <div>
-                    <div>
+                    <div className="overlay-container overlay-hero">
+                    <img src="/design-consultation-2.jpg" alt="consulting"/>
+                    <div className="text-overlay ">
                         <h1>Welcome to GreenScape Solutions - Your Premier Landscaping Partner</h1>
                         <p>At GreenScape Solutions, we recognize that your outdoor space is more than just a backyard -
                             it's an extension of your home, your sanctuary, and your personal oasis. That's why we're
@@ -72,9 +74,9 @@ function Home() {
             <div className="main-content">
                 <div className="row content-card">
                     <motion.div className="column  image-container"
-                                initial={{x: '-200vw', opacity: 0}} // Initial position from the left side
-                                animate={{x: scrollValue >= 0 ? 100 : '-200vw', opacity: scrollValue >= 0 ? 1 : 0.5}}
-                                transition={{duration: 1.2}}
+                                initial={{x: '-200vw', opacity: 0}}
+                                animate={{x: scrollValue >= 300 ? 100 : '-200vw', opacity: scrollValue >= 0 ? 1 : 0.5}}
+                                transition={{duration: 1.4}}
 
                     >
                         <motion.img
@@ -84,9 +86,9 @@ function Home() {
                         />
                     </motion.div>
                     <motion.div className="column image-text-container"
-                                initial={{x: '200vw', opacity: 0}} // Initial position from the left side
-                                animate={{x: scrollValue >= 0 ? 100 : '200vw', opacity: scrollValue >= 0 ? 1 : 0.5}}
-                                transition={{duration: 1.2}}
+                                initial={{x: '200vw', opacity: 0}}
+                                animate={{x: scrollValue > 300 ? 100 : '200vw', opacity: scrollValue > 100 ? 1 : 0.5}}
+                                transition={{duration: 1.4}}
                     >
                         <span>Xeroscape: A serene landscape featuring drought-resistant plants and succulents, arranged in a harmonious composition. The muted color palette and geometric patterns create a tranquil oasis that requires minimal maintenance, perfect for arid climates.</span>
 
@@ -104,7 +106,7 @@ function Home() {
                 <div className="row content-card">
                     <motion.div className="column image-container"
                                 initial={{x: '-200vw', opacity: 0}} // Initial position from the right side
-                                animate={{x: scrollValue > 250 ? 100 : '-200vw', opacity: scrollValue > 250 ? 1 : 0.5}}
+                                animate={{x: scrollValue > 900 ? 100 : '-200vw', opacity: scrollValue > 900 ? 1 : 0.5}}
                                 transition={{duration: 1.2}}
                     >
                         <motion.img
@@ -116,8 +118,8 @@ function Home() {
                     <motion.div className="column image-text-container"
                                 initial={{x: '200vw', opacity: 0}} // Initial position from the right side
                                 animate={{
-                                    x: scrollValue > 250.000 ? 100 : '200vw',
-                                    opacity: scrollValue > 250.000 ? 1 : 0.5
+                                    x: scrollValue > 900.000 ? 100 : '200vw',
+                                    opacity: scrollValue > 900.000 ? 1 : 0.5
                                 }}
                                 transition={{duration: 1.4}}
                     >
@@ -140,20 +142,20 @@ function Home() {
                         className="column image-container"
                         initial={{x: '-200vw', opacity: 0}}
                         animate={{
-                            x: scrollValue > 900
+                            x: scrollValue > 1400
 
-                                ? 100 : '-200vw', opacity: scrollValue > 900
+                                ? 100 : '-200vw', opacity: scrollValue > 1400
 
                                 ? 1 : 0.5
                         }}
-                        transition={{duration: .75}}
+                        transition={{duration: 1.4}}
                     >
                         <motion.img
                             src="../../public/Beautiful-Yard.jpeg"
                             alt="3rd image"
                             className="animated-image"
                             style={{
-                                opacity: scrollValue > 900 ? 1 : 0.5
+                                opacity: scrollValue > 1400 ? 1 : 0.5
                             }}
                         />
                     </motion.div>
@@ -161,12 +163,12 @@ function Home() {
                         className="column image-text-container"
                         initial={{x: '200vw', opacity: 0}}
                         animate={{
-                            x: scrollValue > 900
+                            x: scrollValue > 1400
 
-                                ? 100 : '200vw', opacity: scrollValue > 990
+                                ? 100 : '200vw', opacity: scrollValue > 1400
                                 ? 1 : 0.5
                         }}
-                        transition={{duration: .75}}
+                        transition={{duration: 1.4}}
                     >
                         <span>Beautiful Yard: A picturesque garden brimming with vibrant flowers, lush foliage, and winding pathways. Each corner reveals a new burst of color and texture, inviting exploration and relaxation. This meticulously curated landscape is a testament to the beauty of nature and the artistry of skilled gardeners.</span>
 
@@ -186,10 +188,10 @@ function Home() {
                     <motion.div className="column image-container"
                                 initial={{x: '-200vw', opacity: 0}} // Initial position from the right side
                                 animate={{
-                                    x: scrollValue > 1350 ? 100 : '-200vw',
-                                    opacity: scrollValue > 1350 ? 1 : 0.5
+                                    x: scrollValue > 2000 ? 100 : '-200vw',
+                                    opacity: scrollValue > 2000 ? 1 : 0.5
                                 }}
-                                transition={{duration: 1.2}}
+                                transition={{duration: 1.4}}
                     >
                         <motion.img
                             src="../../public/cactus-garden.jpeg"
@@ -199,7 +201,7 @@ function Home() {
                     </motion.div>
                     <motion.div className="column   image-text-container"
                                 initial={{x: '200vw', opacity: 0}} // Initial position from the right side
-                                animate={{x: scrollValue > 1350 ? 100 : '200vw', opacity: scrollValue > 1350 ? 1 : 0.5}}
+                                animate={{x: scrollValue > 2000 ? 100 : '200vw', opacity: scrollValue > 2000 ? 1 : 0.5}}
                                 transition={{duration: 1.4}}
                     >
                         <span>Cactus Garden: A striking display of desert flora, featuring an array of cacti and succulents in various shapes and sizes. Against a backdrop of sandy soil and rugged rocks, these hardy plants thrive in arid conditions, showcasing their unique forms and resilience.</span>
