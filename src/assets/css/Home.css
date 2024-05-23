@@ -23,7 +23,7 @@ body {
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
-    background-color: black;
+    background-color: #efe085;
 }
 
 @media screen and (min-width: 768px) {
@@ -42,31 +42,14 @@ body {
 .logo {
     height: 6em;
     padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-    .logo {
-        animation: logo-spin infinite 2s linear;
-    }
-}
-
-@keyframes logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }
 
 /* Header */
 .header {
-    background-color: #000000;
-    color: #fff;
+    font-size: 20px;
+    color: #ffffff;
     text-align: center;
-    padding: 10px 20px; /* Add padding */
 }
 
 /* Navbar */
@@ -74,7 +57,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.6); /* Add box shadow to the bottom */
+    background-color: #019356;
+    z-index: 2;
 }
 
 .nav-title {
@@ -127,7 +111,12 @@ body {
     max-width: 100%;
     height: auto;
 }
-
+.main-content p {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.main-content h1 {
+    background-color: rgba(0, 0, 0, 0.1);
+}
 /* Image Container */
 .image-container {
     width: 50%; /* Make the image fill its column */
@@ -195,23 +184,25 @@ body {
 }
 
 .overlay-hero {
-    border-image: fill 1 linear-gradient(hsl(240 100% 50% / .3), hsl(112 74% 46% / .3));
+    /*background-image: linear-gradient(rgba(189, 12, 66, 0.24), rgba(41, 59, 175, 0.16)); !*  to make the text more readable *!*/
 }
 
 .overlay-container img {
     width: 100%;
-    height: auto;
+    height: 600px;
+
 }
 
 .text-overlay {
+    font-size: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: to make the text more readable */
     padding: 20px;
     border-radius: 10px;
-    width: 80%; /* Adjust width as needed */
+    width: 1200px;
+    height: 540px;
 }
 
 .text-overlay h1 {

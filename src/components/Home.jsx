@@ -23,7 +23,7 @@ function Home() {
         <div className="home-container">
             <header className="header">
                 <div className="navbar">
-                    <img className="logo logo-nav" src="../../public/lawn-mower-blades-icon-500x200.png"
+                    <img className="logo logo-nav" src="../../public/greenscape-logo.png"
                          alt="lawnmower"/>
                     <div className="nav-title">
                         <h3>Welcome to Our Landscaping Services</h3>
@@ -39,8 +39,9 @@ function Home() {
                 </div>
             </header>
 
-            <div className="main-content">
-                    <div className="overlay-container overlay-hero">
+            <div className="main-content overlay-hero">
+
+                    <div className="overlay-container">
                     <img src="/design-consultation-2.jpg" alt="consulting"/>
                     <div className="text-overlay ">
                         <h1>Welcome to GreenScape Solutions - Your Premier Landscaping Partner</h1>
@@ -75,7 +76,7 @@ function Home() {
                 <div className="row content-card">
                     <motion.div className="column  image-container"
                                 initial={{x: '-200vw', opacity: 0}}
-                                animate={{x: scrollValue >= 300 ? 100 : '-200vw', opacity: scrollValue >= 0 ? 1 : 0.5}}
+                                animate={{x: scrollValue >= 250 ? 100 : '-200vw', opacity: scrollValue >= 250 ? 1 : 0.5}}
                                 transition={{duration: 1.4}}
 
                     >
@@ -87,7 +88,7 @@ function Home() {
                     </motion.div>
                     <motion.div className="column image-text-container"
                                 initial={{x: '200vw', opacity: 0}}
-                                animate={{x: scrollValue > 300 ? 100 : '200vw', opacity: scrollValue > 100 ? 1 : 0.5}}
+                                animate={{x: scrollValue > 250 ? 100 : '200vw', opacity: scrollValue > 250 ? 1 : 0.5}}
                                 transition={{duration: 1.4}}
                     >
                         <span>Xeroscape: A serene landscape featuring drought-resistant plants and succulents, arranged in a harmonious composition. The muted color palette and geometric patterns create a tranquil oasis that requires minimal maintenance, perfect for arid climates.</span>
@@ -106,7 +107,7 @@ function Home() {
                 <div className="row content-card">
                     <motion.div className="column image-container"
                                 initial={{x: '-200vw', opacity: 0}} // Initial position from the right side
-                                animate={{x: scrollValue > 900 ? 100 : '-200vw', opacity: scrollValue > 900 ? 1 : 0.5}}
+                                animate={{x: scrollValue > 700 ? 100 : '-200vw', opacity: scrollValue > 700 ? 1 : 0.5}}
                                 transition={{duration: 1.2}}
                     >
                         <motion.img
@@ -118,8 +119,8 @@ function Home() {
                     <motion.div className="column image-text-container"
                                 initial={{x: '200vw', opacity: 0}} // Initial position from the right side
                                 animate={{
-                                    x: scrollValue > 900.000 ? 100 : '200vw',
-                                    opacity: scrollValue > 900.000 ? 1 : 0.5
+                                    x: scrollValue > 700? 100 : '200vw',
+                                    opacity: scrollValue > 700? 1 : 0.5
                                 }}
                                 transition={{duration: 1.4}}
                     >
@@ -142,11 +143,7 @@ function Home() {
                         className="column image-container"
                         initial={{x: '-200vw', opacity: 0}}
                         animate={{
-                            x: scrollValue > 1400
-
-                                ? 100 : '-200vw', opacity: scrollValue > 1400
-
-                                ? 1 : 0.5
+                            x: scrollValue > 1200 ? 100 : '-200vw', opacity: scrollValue > 1200 ? 1 : 0.5
                         }}
                         transition={{duration: 1.4}}
                     >
@@ -155,7 +152,7 @@ function Home() {
                             alt="3rd image"
                             className="animated-image"
                             style={{
-                                opacity: scrollValue > 1400 ? 1 : 0.5
+                                opacity: scrollValue > 1200 ? 1 : 0.5
                             }}
                         />
                     </motion.div>
@@ -163,10 +160,7 @@ function Home() {
                         className="column image-text-container"
                         initial={{x: '200vw', opacity: 0}}
                         animate={{
-                            x: scrollValue > 1400
-
-                                ? 100 : '200vw', opacity: scrollValue > 1400
-                                ? 1 : 0.5
+                            x: scrollValue > 1200 ? 100 : '200vw', opacity: scrollValue > 1200 ? 1 : 0.5
                         }}
                         transition={{duration: 1.4}}
                     >
@@ -188,8 +182,8 @@ function Home() {
                     <motion.div className="column image-container"
                                 initial={{x: '-200vw', opacity: 0}} // Initial position from the right side
                                 animate={{
-                                    x: scrollValue > 2000 ? 100 : '-200vw',
-                                    opacity: scrollValue > 2000 ? 1 : 0.5
+                                    x: scrollValue > 1400 ? 100 : '-200vw',
+                                    opacity: scrollValue > 1400 ? 1 : 0.5
                                 }}
                                 transition={{duration: 1.4}}
                     >
@@ -201,7 +195,7 @@ function Home() {
                     </motion.div>
                     <motion.div className="column   image-text-container"
                                 initial={{x: '200vw', opacity: 0}} // Initial position from the right side
-                                animate={{x: scrollValue > 2000 ? 100 : '200vw', opacity: scrollValue > 2000 ? 1 : 0.5}}
+                                animate={{x: scrollValue > 1400 ? 100 : '200vw', opacity: scrollValue > 1400 ? 1 : 0.5}}
                                 transition={{duration: 1.4}}
                     >
                         <span>Cactus Garden: A striking display of desert flora, featuring an array of cacti and succulents in various shapes and sizes. Against a backdrop of sandy soil and rugged rocks, these hardy plants thrive in arid conditions, showcasing their unique forms and resilience.</span>
