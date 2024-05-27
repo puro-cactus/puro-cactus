@@ -221,7 +221,7 @@ function Home() {
                     </div>
 
                     <footer className="footer">
-                        <p>&copy; 2024 Your Landscaping Services</p>
+                        <p>&copy; 2024 Green Scape Solutions</p>
                     </footer>
                 </div>
             </div>
