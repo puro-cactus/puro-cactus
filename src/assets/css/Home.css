@@ -197,7 +197,7 @@ body {
     border-radius: 10px;
     width: 100%; /* Adjust width as needed */
     height: 100%;
-    background: linear-gradient(rgba(33, 7, 203, 0.24), rgba(17, 36, 164, 0.16)); /* Gradient background for readability */
+    background: linear-gradient(rgba(4, 1, 21, 0.37), rgba(2, 6, 30, 0.36)); /* Gradient background for readability */
     border: 1px solid; /* Define a solid border to apply border-image to */
     border-image-source: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)); /* Gradient for border image */
     border-image-slice: 1; /* Ensure the border image covers the entire border area */
