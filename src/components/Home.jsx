@@ -180,7 +180,7 @@ function Home() {
                                 }}
                                 transition={{duration: 1}}
                             >
-                                <span>Beautiful Yard: A picturesque garden brimming with vibrant flowers, lush foliage, and winding pathways. Each corner reveals a new burst of color and texture, inviting exploration and relaxation. This meticulously curated landscape is a testament to the beauty of nature and the artistry of skilled gardeners.</span>
+                                <span>Garden Edging: In this tranquil garden, stone edging frames the landscape with understated elegance. Absent of colorful blooms, the garden relies on the timeless charm of weathered stones, guiding pathways through lush foliage and inviting contemplation amidst its serene beauty. Each stone whispers tales of endurance, blending seamlessly with nature's quiet symphony, creating a space where simplicity and tranquility reign supreme.</span>
                             </motion.div>
                         </div>
                     </div>
@@ -196,8 +196,8 @@ function Home() {
                             <motion.div className="column image-container"
                                         initial={{x: '-200vw', opacity: 0}}
                                         animate={{
-                                            x: scrollValue > 1400 ? 100 : '-200vw',
-                                            opacity: scrollValue > 1400 ? 1 : 0.5
+                                            x: scrollValue > 1700 ? 100 : '-200vw',
+                                            opacity: scrollValue > 1700 ? 1 : 0.5
                                         }}
                                         transition={{duration: 1}}
                             >
@@ -210,8 +210,8 @@ function Home() {
                             <motion.div className="column image-text-container"
                                         initial={{x: '200vw', opacity: 0}}
                                         animate={{
-                                            x: scrollValue > 1400 ? 100 : '200vw',
-                                            opacity: scrollValue > 1400 ? 1 : 0.5
+                                            x: scrollValue > 1700 ? 100 : '200vw',
+                                            opacity: scrollValue > 1700 ? 1 : 0.5
                                         }}
                                         transition={{duration: 1}}
                             >
