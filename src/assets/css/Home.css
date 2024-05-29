@@ -23,6 +23,7 @@ body {
     margin: 0 auto;
     text-align: center;
     background-image: url("public/rocks-plants-wallpaper.jpeg");
+    overflow-x: hidden; /* Disable horizontal scrolling */
 }
 
 @media screen and (min-width: 768px) {
@@ -41,7 +42,6 @@ body {
 .logo {
     height: 6em;
     padding: 1.5em;
-
 }
 
 /* Header */
@@ -49,6 +49,99 @@ body {
     font-size: 20px;
     color: #ffffff;
     text-align: center;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+    position: relative;
+}
+
+.hamburger.open div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #019356;
+    z-index: 2;
+    padding: 10px 20px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    margin-right: 20px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav ul li a:hover {
+    text-decoration: underline;
+    filter: drop-shadow(0 0 2px #61dafb); /* Drop shadow effect on hover */
+}
+
+@media (max-width: 768px) {
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #019356;
+        padding: 0;
+    }
+
+    .nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-title h2 {
+        display: none; /* Hide the title on tablet and smaller screens */
+    }
 }
 
 /* Navbar */
@@ -110,14 +203,15 @@ body {
     max-width: 100%;
     height: auto;
 }
+
 .main-content p {
-    /*background-color: rgba(0, 0, 0, 0.40);*/
     border-radius: 1%;
 }
+
 .main-content h1 {
-    /*background-color: rgba(0, 0, 0, 0.40);*/
     border-radius: 1%;
 }
+
 /* Image Container */
 .image-container {
     width: 50%; /* Make the image fill its column */
@@ -144,8 +238,8 @@ body {
     max-width: 50%;
 }
 
+
 .content-card {
-    /*background-color: #888888;*/
     background: rgba(0, 0, 0, 0.5);
     border: #333333 2px solid;
     box-shadow: 0px 0px 0px #1b1b1b, 0px 0px 0px #272727;
@@ -172,9 +266,6 @@ body {
     text-align: center;
 }
 
-.space {
-    /*margin-left: 150px;*/
-}
 /* New styles for the overlay effect */
 .overlay-container {
     position: relative; /* Position relative for absolute positioning of text */
@@ -205,10 +296,27 @@ body {
     border-image-outset: 0; /* Optional: define the amount by which the border image area extends beyond the border box */
     border-image-repeat: stretch; /* Ensure the border image stretches to fill the entire border */
 }
-.overlay-hero-text{
+
+.overlay-hero-text {
     font-size: 1.5em;
 }
+
 .overlay-hero h1 {
     margin: 0 0 20px 0;
     font-size: 2em;
+}
+
+/* Media query to hide paragraphs except the first one on smaller screens */
+@media (max-width: 768px) {
+    .overlay-hero-text p {
+        display: none;
+    }
+
+    .overlay-hero-text .first-paragraph {
+        display: block;
+    }
+
+    .overlay-hero-text .second-paragraph {
+        display: block;
+    }
 }
