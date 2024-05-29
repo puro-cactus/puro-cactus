@@ -6,7 +6,7 @@ function Home() {
     const [scrollValue, setScrollValue] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false);
     const navRef = useRef(null);
-
+    // Scroll value
     useEffect(() => {
         const handleScroll = () => {
             setScrollValue(window.scrollY);
@@ -18,7 +18,21 @@ function Home() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+    // Handle hamburger in mobile
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 768) {
+                setMenuOpen(false); // Close the menu if screen size is larger than 768px
+            }
+        };
 
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+    // Handle Click to close Hamburger
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (navRef.current && !navRef.current.contains(event.target)) {
@@ -44,7 +58,7 @@ function Home() {
         <div className="home-container">
             <header className="header">
                 <div className="navbar" ref={navRef}>
-                    <img className="logo logo-nav" src="/greenscape-logo.png" alt="lawnmower" />
+                    <img className={`logo logo-nav ${menuOpen ? 'opacity-0' : ''}`} src="/greenscape-logo.png" alt="LOGO" />
                     <div className="nav-title">
                         <h2>Welcome to GreenScape Solutions - Your Premier Landscaping Partner</h2>
                     </div>
@@ -88,7 +102,7 @@ function Home() {
                                         initial={{ x: '-200px', opacity: 0 }}
                                         animate={{
                                             x: scrollValue >= 250 ? 100 : '-200px',
-                                            opacity: scrollValue >= 250 ? 1 : 0.5
+                                            opacity: scrollValue >= 250 ? 1 : 0
                                         }}
                                         transition={{ duration: 1 }}
                             >
@@ -102,7 +116,7 @@ function Home() {
                                         initial={{ x: '200px', opacity: 0 }}
                                         animate={{
                                             x: scrollValue > 250 ? 100 : '200px',
-                                            opacity: scrollValue > 250 ? 1 : 0.5
+                                            opacity: scrollValue > 250 ? 1 : 0
                                         }}
                                         transition={{ duration: 1 }}
                             >
@@ -123,7 +137,7 @@ function Home() {
                                         initial={{ x: '-200px', opacity: 0 }}
                                         animate={{
                                             x: scrollValue > 700 ? 100 : '-200px',
-                                            opacity: scrollValue > 700 ? 1 : 0.5
+                                            opacity: scrollValue > 700 ? 1 : 0
                                         }}
                                         transition={{ duration: 1 }}
                             >
@@ -137,7 +151,7 @@ function Home() {
                                         initial={{ x: '200px', opacity: 0 }}
                                         animate={{
                                             x: scrollValue > 700 ? 100 : '200px',
-                                            opacity: scrollValue > 700 ? 1 : 0.5
+                                            opacity: scrollValue > 700 ? 1 : 0
                                         }}
                                         transition={{ duration: 1 }}
                             >
@@ -159,7 +173,7 @@ function Home() {
                                 initial={{ x: '-200px', opacity: 0 }}
                                 animate={{
                                     x: scrollValue > 1200 ? 100 : '-200px',
-                                    opacity: scrollValue > 1200 ? 1 : 0.5
+                                    opacity: scrollValue > 1200 ? 1 : 0
                                 }}
                                 transition={{ duration: 1 }}
                             >
@@ -168,7 +182,7 @@ function Home() {
                                     alt="3rd image"
                                     className="animated-image"
                                     style={{
-                                        opacity: scrollValue > 1200 ? 1 : 0.5
+                                        opacity: scrollValue > 1200 ? 1 : 0
                                     }}
                                 />
                             </motion.div>
@@ -177,7 +191,7 @@ function Home() {
                                 initial={{ x: '200px', opacity: 0 }}
                                 animate={{
                                     x: scrollValue > 1600 ? (window.innerWidth > 768 ? 100 : '20px') : '200px',
-                                    opacity: scrollValue > 1600 ? 1 : 0.5
+                                    opacity: scrollValue > 1600 ? 1 : 0
                                 }}
                                 transition={{ duration: 1 }}
                             >
@@ -199,7 +213,7 @@ function Home() {
                                         initial={{ x: '-200px', opacity: 0 }}
                                         animate={{
                                             x: scrollValue > 1600 ? 100 : '-200px',
-                                            opacity: scrollValue > 1600 ? 1 : 0.5
+                                            opacity: scrollValue > 1600 ? 1 : 0
                                         }}
                                         transition={{ duration: 1 }}
                             >
@@ -213,7 +227,7 @@ function Home() {
                                         initial={{ x: '200px', opacity: 0 }}
                                         animate={{
                                             x: scrollValue > 1600 ? 100 : '200px',
-                                            opacity: scrollValue > 1600 ? 1 : 0.5
+                                            opacity: scrollValue > 1600 ? 1 : 0
                                         }}
                                         transition={{ duration: 1 }}
                             >
