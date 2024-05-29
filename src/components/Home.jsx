@@ -1,11 +1,28 @@
 import React, { useEffect, useState ,useRef} from 'react';
 import { motion } from 'framer-motion'; // Import motion from Framer Motion
+import { useInView } from 'react-intersection-observer';
 import '../assets/css/Home.css';
 
 function Home() {
     const [scrollValue, setScrollValue] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false);
     const navRef = useRef(null);
+
+    const [ref1, inView1] = useInView({
+        threshold: 0.5, // Trigger when 50% of the element is visible
+    });
+
+    const [ref2, inView2] = useInView({
+        threshold: 0.5,
+    });
+
+    const [ref3, inView3] = useInView({
+        threshold: 0.5,
+    });
+    const [ref4, inView4] = useInView({
+        threshold: 0.5,
+    });
+
     // Scroll value
     useEffect(() => {
         const handleScroll = () => {
@@ -98,13 +115,15 @@ function Home() {
                 <div className="content-section">
                     <div className="main-content">
                         <div className="row content-card">
-                            <motion.div className="column image-container"
-                                        initial={{ x: '-200px', opacity: 0 }}
-                                        animate={{
-                                            x: scrollValue >= 250 ? 100 : '-200px',
-                                            opacity: scrollValue >= 250 ? 1 : 0
-                                        }}
-                                        transition={{ duration: 1 }}
+                            <motion.div
+                                ref={ref1}
+                                className="column image-container"
+                                initial={{ x: '-200px', opacity: 0 }}
+                                animate={{
+                                    x: inView1 ? 0 : '-200px',
+                                    opacity: inView1 ? 1 : 0,
+                                }}
+                                transition={{ duration: 1 }}
                             >
                                 <motion.img
                                     src="/xeroscape.JPG"
@@ -112,13 +131,14 @@ function Home() {
                                     className="animated-image"
                                 />
                             </motion.div>
-                            <motion.div className="column image-text-container"
-                                        initial={{ x: '200px', opacity: 0 }}
-                                        animate={{
-                                            x: scrollValue > 250 ? 100 : '200px',
-                                            opacity: scrollValue > 250 ? 1 : 0
-                                        }}
-                                        transition={{ duration: 1 }}
+                            <motion.div
+                                className="column image-text-container"
+                                initial={{ x: '200px', opacity: 0 }}
+                                animate={{
+                                    x: inView1 ? 0 : '200px',
+                                    opacity: inView1 ? 1 : 0,
+                                }}
+                                transition={{ duration: 1 }}
                             >
                                 <span>Xeroscape: A serene landscape featuring drought-resistant plants and succulents, arranged in a harmonious composition. The muted color palette and geometric patterns create a tranquil oasis that requires minimal maintenance, perfect for arid climates.</span>
                             </motion.div>
@@ -133,13 +153,15 @@ function Home() {
 
                     <div className="main-content">
                         <div className="row content-card">
-                            <motion.div className="column image-container"
-                                        initial={{ x: '-200px', opacity: 0 }}
-                                        animate={{
-                                            x: scrollValue > 700 ? 100 : '-200px',
-                                            opacity: scrollValue > 700 ? 1 : 0
-                                        }}
-                                        transition={{ duration: 1 }}
+                            <motion.div
+                                ref={ref2}
+                                className="column image-container"
+                                initial={{ x: '-200px', opacity: 0 }}
+                                animate={{
+                                    x: inView2 ? 0 : '-200px',
+                                    opacity: inView2 ? 1 : 0,
+                                }}
+                                transition={{ duration: 1 }}
                             >
                                 <motion.img
                                     src="/artificial-grass.jpeg"
@@ -147,13 +169,14 @@ function Home() {
                                     className="animated-image"
                                 />
                             </motion.div>
-                            <motion.div className="column image-text-container"
-                                        initial={{ x: '200px', opacity: 0 }}
-                                        animate={{
-                                            x: scrollValue > 700 ? 100 : '200px',
-                                            opacity: scrollValue > 700 ? 1 : 0
-                                        }}
-                                        transition={{ duration: 1 }}
+                            <motion.div
+                                className="column image-text-container"
+                                initial={{ x: '200px', opacity: 0 }}
+                                animate={{
+                                    x: inView2 ? 0 : '200px',
+                                    opacity: inView2 ? 1 : 0,
+                                }}
+                                transition={{ duration: 1 }}
                             >
                                 <span>Artificial Grass: A lush green lawn crafted from high-quality synthetic turf, offering the look and feel of natural grass without the need for watering or mowing. Perfectly manicured and evergreen, it provides a vibrant and low-maintenance solution for residential and commercial landscapes.</span>
                             </motion.div>
@@ -169,11 +192,12 @@ function Home() {
                     <div className="main-content">
                         <div className="row content-card">
                             <motion.div
+                                ref={ref3}
                                 className="column image-container"
                                 initial={{ x: '-200px', opacity: 0 }}
                                 animate={{
-                                    x: scrollValue > 1200 ? 100 : '-200px',
-                                    opacity: scrollValue > 1200 ? 1 : 0
+                                    x: inView3 ? 0 : '-200px',
+                                    opacity: inView3 ? 1 : 0,
                                 }}
                                 transition={{ duration: 1 }}
                             >
@@ -181,17 +205,14 @@ function Home() {
                                     src="/Beautiful-Yard.jpeg"
                                     alt="3rd image"
                                     className="animated-image"
-                                    style={{
-                                        opacity: scrollValue > 1200 ? 1 : 0
-                                    }}
                                 />
                             </motion.div>
                             <motion.div
                                 className="column image-text-container"
                                 initial={{ x: '200px', opacity: 0 }}
                                 animate={{
-                                    x: scrollValue > 1600 ? (window.innerWidth > 768 ? 100 : '20px') : '200px',
-                                    opacity: scrollValue > 1600 ? 1 : 0
+                                    x: inView3 ? 0 : '200px',
+                                    opacity: inView3 ? 1 : 0,
                                 }}
                                 transition={{ duration: 1 }}
                             >
@@ -209,13 +230,15 @@ function Home() {
 
                     <div className="main-content">
                         <div className="row content-card">
-                            <motion.div className="column image-container"
-                                        initial={{ x: '-200px', opacity: 0 }}
-                                        animate={{
-                                            x: scrollValue > 1600 ? 100 : '-200px',
-                                            opacity: scrollValue > 1600 ? 1 : 0
-                                        }}
-                                        transition={{ duration: 1 }}
+                            <motion.div
+                                ref={ref4}
+                                className="column image-container"
+                                initial={{ x: '-200px', opacity: 0 }}
+                                animate={{
+                                    x: inView4 ? 0 : '-200px',
+                                    opacity: inView4 ? 1 : 0,
+                                }}
+                                transition={{ duration: 1 }}
                             >
                                 <motion.img
                                     src="/cactus-garden.jpeg"
@@ -223,13 +246,14 @@ function Home() {
                                     className="animated-image"
                                 />
                             </motion.div>
-                            <motion.div className="column image-text-container"
-                                        initial={{ x: '200px', opacity: 0 }}
-                                        animate={{
-                                            x: scrollValue > 1600 ? 100 : '200px',
-                                            opacity: scrollValue > 1600 ? 1 : 0
-                                        }}
-                                        transition={{ duration: 1 }}
+                            <motion.div
+                                className="column image-text-container"
+                                initial={{ x: '200px', opacity: 0 }}
+                                animate={{
+                                    x: inView4 ? 0 : '200px',
+                                    opacity: inView4 ? 1 : 0,
+                                }}
+                                transition={{ duration: 1 }}
                             >
                                 <span>Cactus Garden: A striking display of desert flora, featuring an array of cacti and succulents in various shapes and sizes. Against a backdrop of sandy soil and rugged rocks, these hardy plants thrive in arid conditions, showcasing their unique forms and resilience.</span>
                             </motion.div>

@@ -246,7 +246,7 @@ body {
 /* Image Text Container */
 .image-text-container {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     padding-left: 20px;
 }
 
