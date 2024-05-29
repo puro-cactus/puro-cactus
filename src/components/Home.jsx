@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState ,useRef} from 'react';
 import { motion } from 'framer-motion'; // Import motion from Framer Motion
 import '../assets/css/Home.css';
 
 function Home() {
     const [scrollValue, setScrollValue] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false);
-
+    const navRef = useRef(null);
 
     useEffect(() => {
         const handleScroll = () => {
             setScrollValue(window.scrollY);
-            console.log(scrollValue)
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -20,14 +19,31 @@ function Home() {
         };
     }, []);
 
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (navRef.current && !navRef.current.contains(event.target)) {
+                setMenuOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
+    };
+    const handleCloseButtonClick = () => {
+        setMenuOpen(false);
     };
 
     return (
         <div className="home-container">
             <header className="header">
-                <div className="navbar">
+                <div className="navbar" ref={navRef}>
                     <img className="logo logo-nav" src="/greenscape-logo.png" alt="lawnmower" />
                     <div className="nav-title">
                         <h2>Welcome to GreenScape Solutions - Your Premier Landscaping Partner</h2>
@@ -38,10 +54,14 @@ function Home() {
                             <div></div>
                             <div></div>
                         </button>
+
                         <ul className={menuOpen ? 'active' : ''}>
                             <li><a href="#">About Us</a></li>
                             <li><a href="#">Portfolio</a></li>
                             <li><a href="#">Contact</a></li>
+                            {menuOpen && (
+                                <button className="close-button" onClick={handleCloseButtonClick}>&times;</button>
+                            )}
                         </ul>
                     </nav>
                 </div>
