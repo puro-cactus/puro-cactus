@@ -1,4 +1,3 @@
-// Layout.js
 import React, { useState, useRef, useEffect } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import '../assets/css/Home.css';
@@ -58,6 +57,7 @@ const Layout = () => {
                         <ul className={menuOpen ? 'active' : ''}>
                             <li><Link to="/" onClick={handleCloseButtonClick}>Home</Link></li>
                             <li><Link to="/portfolio" onClick={handleCloseButtonClick}>Portfolio</Link></li>
+                            <li><Link to="/about" onClick={handleCloseButtonClick}>About Us</Link></li>
                             <li><Link to="/contact" onClick={handleCloseButtonClick}>Contact</Link></li>
                             {menuOpen && (
                                 <button className="close-button" onClick={handleCloseButtonClick}>&times;</button>

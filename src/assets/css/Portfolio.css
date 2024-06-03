@@ -1,0 +1,56 @@
+:root {
+    --gradient-bg: linear-gradient(
+            90deg,
+            hsl(120deg 100% 0%) 0%,
+            hsl(137deg 35% 7%) 8%,
+            hsl(150deg 47% 10%) 15%,
+            hsl(161deg 82% 12%) 23%,
+            hsl(164deg 97% 15%) 31%,
+            hsl(164deg 97% 20%) 39%,
+            hsl(164deg 94% 25%) 46%,
+            hsl(164deg 94% 25%) 54%,
+            hsl(164deg 97% 20%) 62%,
+            hsl(164deg 97% 15%) 69%,
+            hsl(161deg 82% 12%) 77%,
+            hsl(150deg 47% 10%) 85%,
+            hsl(137deg 35% 7%) 92%,
+            hsl(120deg 100% 0%) 100%
+    );
+}
+
+.portfolio-container {
+    padding: 20px;
+    background: var(--gradient-bg);
+    width: 100%;
+}
+
+.portfolio-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.portfolio-item h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.portfolio-item p {
+    margin-top: 5px;
+}

@@ -64,32 +64,6 @@ function Home() {
 
     return (
         <div className="home-container">
-            {/*<header className="header">*/}
-            {/*    <div className="navbar" ref={navRef}>*/}
-            {/*        <img className={`logo logo-nav ${menuOpen ? 'opacity-0' : ''}`} src="/greenscape-logo.png"*/}
-            {/*             alt="LOGO"/>*/}
-            {/*        <div className="nav-title">*/}
-            {/*            <h2>Welcome to GreenScape Solutions - Your Premier Landscaping Partner</h2>*/}
-            {/*        </div>*/}
-            {/*        <nav className="nav">*/}
-            {/*            <button className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>*/}
-            {/*                <div></div>*/}
-            {/*                <div></div>*/}
-            {/*                <div></div>*/}
-            {/*            </button>*/}
-
-            {/*            <ul className={menuOpen ? 'active' : ''}>*/}
-            {/*                <li><a href="#">About Us</a></li>*/}
-            {/*                <li><a href="#">Portfolio</a></li>*/}
-            {/*                <li><a href="#">Contact</a></li>*/}
-            {/*                {menuOpen && (*/}
-            {/*                    <button className="close-button" onClick={handleCloseButtonClick}>&times;</button>*/}
-            {/*                )}*/}
-            {/*            </ul>*/}
-            {/*        </nav>*/}
-            {/*    </div>*/}
-            {/*</header>*/}
-
             <div className="main-content">
                 <div className="overlay-container">
                     <img src="/design-consultation-2.jpg" alt="consulting"/>

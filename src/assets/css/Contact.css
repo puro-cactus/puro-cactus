@@ -1,0 +1,73 @@
+:root {
+    --gradient-bg: linear-gradient(
+            90deg,
+            hsl(120deg 100% 0%) 0%,
+            hsl(137deg 35% 7%) 8%,
+            hsl(150deg 47% 10%) 15%,
+            hsl(161deg 82% 12%) 23%,
+            hsl(164deg 97% 15%) 31%,
+            hsl(164deg 97% 20%) 39%,
+            hsl(164deg 94% 25%) 46%,
+            hsl(164deg 94% 25%) 54%,
+            hsl(164deg 97% 20%) 62%,
+            hsl(164deg 97% 15%) 69%,
+            hsl(161deg 82% 12%) 77%,
+            hsl(150deg 47% 10%) 85%,
+            hsl(137deg 35% 7%) 92%,
+            hsl(120deg 100% 0%) 100%
+    );
+}
+
+
+.contact-container {
+    padding: 20px;
+    background: var(--gradient-bg);
+    width: 100%;
+
+}
+
+.contact-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
