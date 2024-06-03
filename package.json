@@ -13,8 +13,7 @@
     "framer-motion": "^11.1.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-intersection-observer": "^9.10.2",
-    "react-router-dom": "^6.23.1"
+    "react-intersection-observer": "^9.10.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
@@ -24,6 +23,7 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "react-router-dom": "^6.23.1",
     "vite": "^5.2.0"
   }
 }

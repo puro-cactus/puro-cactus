@@ -91,6 +91,7 @@ body {
 .hamburger.open div:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
 }
+
 .close-button {
     width: 50px;
     height: 50px;
@@ -109,6 +110,7 @@ body {
 .close-button:hover {
     background-color: #555;
 }
+
 /* Navbar */
 
 
@@ -141,11 +143,13 @@ body {
     color: #fff;
     text-decoration: none;
 }
-.nav ul button{
-   position: absolute;
+
+.nav ul button {
+    position: absolute;
     left: 90%;
     bottom: 15%;
 }
+
 .nav ul li a:hover {
     text-decoration: underline;
     filter: drop-shadow(0 0 2px #61dafb); /* Drop shadow effect on hover */
@@ -176,8 +180,6 @@ body {
         display: none; /* Hide the title on tablet and smaller screens */
     }
 }
-
-
 
 
 .nav-menu {
@@ -280,6 +282,7 @@ body {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    background: var(--gradient-bg);
 }
 
 /* New styles for the overlay effect */

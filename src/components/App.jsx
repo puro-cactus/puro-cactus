@@ -1,19 +1,26 @@
-import React, {useState} from 'react'
-import reactLogo from '../assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import '../assets/css/App.css'
 import Home from "./Home.jsx";
+import AboutUs from "./AboutUs.jsx";
+import Layout from "./Layout.jsx";
 
 
 function App() {
 
     return (
-        <>
-
-            <Home/>
-
-        </>
-    )
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<Home />} />
+                    <Route path="about" element={<AboutUs/>}/>
+                    {/*<Route path="portfolio" element={<Portfolio />} />*/}
+                    {/*<Route path="contact" element={<Contact />} />*/}
+                    {/*<Route path="*" element={<NoPage />} />*/}
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App
