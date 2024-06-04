@@ -47,7 +47,7 @@ const Layout = () => {
         <div className="layout-container">
             <header className="header">
                 <div className="navbar" ref={navRef}>
-                    <img className={`logo logo-nav ${menuOpen ? 'opacity-0' : ''}`} src="/greenscape-logo.png" alt="LOGO" />
+                    <img className={`logo logo-nav ${menuOpen ? 'opacity-0' : ''}`} src="/puro-cuctus-LOGO.PNG" alt="LOGO" />
                     <nav className="nav">
                         <button className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
                             <div></div>
@@ -74,7 +74,7 @@ const Layout = () => {
 
             <footer className="footer">
                 <hr/>
-                <p>&copy; 2024 Green Scape Solutions</p>
+                <p>&copy; 2024 Puro Cactus Nursery | Landscaping</p>
             </footer>
         </div>
     );

@@ -1,21 +1,11 @@
 /* Global Styles */
 :root {
-    --gradient-bg: linear-gradient(
+    --gradient-bg:linear-gradient(
             90deg,
-            hsl(120deg 100% 0%) 0%,
-            hsl(137deg 35% 7%) 8%,
-            hsl(150deg 47% 10%) 15%,
-            hsl(161deg 82% 12%) 23%,
-            hsl(164deg 97% 15%) 31%,
-            hsl(164deg 97% 20%) 39%,
-            hsl(164deg 94% 25%) 46%,
-            hsl(164deg 94% 25%) 54%,
-            hsl(164deg 97% 20%) 62%,
-            hsl(164deg 97% 15%) 69%,
-            hsl(161deg 82% 12%) 77%,
-            hsl(150deg 47% 10%) 85%,
-            hsl(137deg 35% 7%) 92%,
-            hsl(120deg 100% 0%) 100%
+            hsl(346deg 75% 49%) 0%,
+            hsl(17deg 89% 59%) 33%,
+            hsl(17deg 89% 59%) 67%,
+            hsl(346deg 75% 49%) 100%
     );
 }
 
@@ -30,7 +20,8 @@
 body {
     margin: 0 auto;
     text-align: center;
-    background-image: url("public/rocks-plants-wallpaper.jpeg");
+    background-image: url("public/red-gravel.jpeg");
+    background-size: auto;
     overflow-x: hidden; /* Disable horizontal scrolling */
 }
 
@@ -118,9 +109,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #019356;
+    background-color: #dc204b;
     z-index: 2;
-    padding: 10px 20px;
+    padding: 0px 10px;
 }
 
 .nav {
@@ -163,7 +154,7 @@ body {
         position: absolute;
         top: 60px;
         left: 0;
-        background-color: #029f5d;
+        background-color: #f88c34;
         padding: 0;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     }

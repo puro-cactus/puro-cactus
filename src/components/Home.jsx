@@ -59,32 +59,15 @@ function Home() {
         <div className="home-container">
             <div className="main-content">
                 <div className="overlay-container">
-                    <img src="/design-consultation-2.jpg" alt="consulting"/>
-                    <div className="overlay-hero">
-                        <div className="overlay-hero-text">
-                            <p className="first-paragraph">At GreenScape Solutions, we recognize that your outdoor space
-                                is more than just a backyard - it's an extension of your home, your sanctuary, and your
-                                personal oasis. That's why we're committed to turning ordinary yards into extraordinary
-                                landscapes that mirror your distinct style and aspirations.</p>
-                            <p className={"second-paragraph"}>With a deep-rooted passion for nature and a dedication to
-                                excellence, our team of seasoned landscapers brings forth creativity, expertise, and
-                                meticulous attention to detail to every project we take on. Whether you envision a
-                                verdant green lawn, vibrant flower beds, or a tranquil outdoor living area, we possess
-                                the knowledge and proficiency to transform your landscaping dreams into reality.</p>
-                            <p>From initial design concepts to flawless installation and ongoing maintenance, we
-                                collaborate closely with each of our clients to ensure that their outdoor spaces not
-                                only meet but surpass their expectations. We take pride in delivering exceptional
-                                results that enhance the beauty, functionality, and value of your property.</p>
-                            <p>Yet, our focus extends beyond crafting stunning landscapes - it's about fostering
-                                enduring relationships with our clients. We believe in transparent communication,
-                                honesty, and personalized service at every phase of the project. Your satisfaction is
-                                our foremost priority, and we're committed to going the extra mile to ensure that you're
-                                delighted with the end outcome.</p>
-                            <p>So whether you're seeking to rejuvenate your existing landscape or envisioning a brand
-                                new outdoor masterpiece, entrust the expertise of GreenScape Solutions to bring your
-                                vision to fruition. Get in touch with us today to arrange a consultation and let's
-                                commence the journey of transforming your outdoor space into the landscape of your
-                                dreams!</p>
+                    <div className="overlay-container">
+                        <img src="/hero-cactus.jpeg" alt="Puro Cactus"/>
+                        <div className="overlay-hero">
+                            <div className="overlay-hero-text">
+                                <p className="first-paragraph">At Puro Cactus, we recognize that your home environment is more than just a space - it's an extension of your lifestyle, your sanctuary, and your personal oasis. That's why we're committed to integrating nature's resilience and purity into every aspect of your home.</p>
+                                <p className={"second-paragraph"}>With a deep-rooted passion for sustainability and a dedication to excellence, our team of experts brings forth creativity, expertise, and meticulous attention to detail to every product we develop. Whether you envision eco-friendly home goods, organic skincare, or sustainable packaging, we possess the knowledge and proficiency to transform your sustainability dreams into reality.</p>
+                                <p>Yet, our focus extends beyond creating outstanding products - it's about fostering enduring relationships with our customers. We believe in transparent communication, honesty, and personalized service at every phase of our interaction. Your satisfaction is our foremost priority, and we're committed to going the extra mile to ensure that you're delighted with the end outcome.</p>
+                                <p>So whether you're seeking to rejuvenate your home with sustainable solutions or envisioning a brand new eco-friendly lifestyle, entrust the expertise of Puro Cactus to bring your vision to fruition. Get in touch with us today to explore our range of products and let's commence the journey of transforming your space with the purity and resilience of nature!</p>
+                            </div>
                         </div>
                     </div>
                 </div>
