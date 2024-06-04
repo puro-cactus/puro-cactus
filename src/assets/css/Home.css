@@ -201,20 +201,15 @@ body {
     z-index: 1000; /* Ensure it covers the entire page */
 }
 
-/* Main Content */
-.main-content {
-    padding: 20px 0;
-}
 
-.main-content h2 {
-    margin-bottom: 10px;
-}
+/*Main Content */
 
-/* Main Content Images */
 .main-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 20px 0;
+    background: var(--gradient-bg);
 }
 
 .main-content img {
@@ -230,6 +225,14 @@ body {
     border-radius: 1%;
 }
 
+.main-content h2 {
+    margin-bottom: 10px;
+}
+.main-content-title{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 /* Image Container */
 .image-container {
     width: 50%; /* Make the image fill its column */
@@ -305,7 +308,7 @@ body {
     transform: translate(-50%, -50%);
     padding-top: 20px;
     border-radius: 10px;
-    width: 100%; /* Adjust width as needed */
+    width: 100%;
     height: 100%;
     background: linear-gradient(rgba(4, 1, 21, 0.37), rgba(2, 6, 30, 0.36)); /* Gradient background for readability */
     border: 1px solid; /* Define a solid border to apply border-image to */
@@ -318,6 +321,8 @@ body {
 
 .overlay-hero-text {
     font-size: 1.5em;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .overlay-hero h1 {

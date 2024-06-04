@@ -22,6 +22,8 @@
     padding: 20px;
     background: var(--gradient-bg);
     width: 100%;
+    min-height: 500px;
+    color: #fff;
 }
 
 .portfolio-container h1 {
@@ -39,6 +41,8 @@
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 5px;
+    background: rgba(27, 27, 27, 0.5);
+
 }
 
 .portfolio-item img {

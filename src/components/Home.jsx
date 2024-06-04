@@ -55,13 +55,6 @@ function Home() {
         };
     }, []);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
-    const handleCloseButtonClick = () => {
-        setMenuOpen(false);
-    };
-
     return (
         <div className="home-container">
             <div className="main-content">
@@ -98,6 +91,13 @@ function Home() {
 
                 <div className="content-section">
                     <div className="main-content">
+                        <div className={"row"}>
+                            <div className={"column"}>
+                                <h1 className={"main-content-title"}>
+                                    Services
+                                </h1>
+                            </div>
+                        </div>
                         <div className="row content-card">
                             <motion.div
                                 ref={ref1}
