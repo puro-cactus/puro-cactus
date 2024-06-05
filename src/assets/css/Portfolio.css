@@ -1,11 +1,17 @@
 :root {
-    --gradient-bg:linear-gradient(
+    --gradient-bg: linear-gradient(
             90deg,
             hsl(346deg 75% 49%) 0%,
             hsl(17deg 89% 59%) 33%,
             hsl(17deg 89% 59%) 67%,
             hsl(346deg 75% 49%) 100%
     );
+    --circle-gradient: repeating-radial-gradient(
+            circle,
+            #f88c34,
+            #c7197b 20%
+    );
+
 }
 
 .portfolio-container {
@@ -32,7 +38,7 @@
     padding: 10px;
     border-radius: 5px;
     background: rgba(27, 27, 27, 0.5);
-
+    cursor: pointer;
 }
 
 .portfolio-item img {
@@ -48,4 +54,54 @@
 
 .portfolio-item p {
     margin-top: 5px;
+}
+
+/* Modal and Carousel Styles */
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    background: var(--gradient-bg);
+    padding: 20px;
+    outline: none;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+}
+
+.close-button {
+    color: #fff;
+    border: none;
+    background: var(--circle-gradient);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-button::before {
+    content: '×';
+    font-size: 32px;
+}
+
+
+.carousel .slide img {
+    border-radius: 10px;
 }

@@ -111,7 +111,7 @@ function Home() {
                                 }}
                                 transition={{duration: 1}}
                             >
-                                <span>Xeroscape: A serene landscape featuring drought-resistant plants and succulents, arranged in a harmonious composition. The muted color palette and geometric patterns create a tranquil oasis that requires minimal maintenance, perfect for arid climates.</span>
+                                <span>Xeriscape: A serene landscape featuring drought-resistant plants and succulents, arranged in a harmonious composition. The muted color palette and geometric patterns create a tranquil oasis that requires minimal maintenance, perfect for arid climates.</span>
                             </motion.div>
                         </div>
                     </div>
