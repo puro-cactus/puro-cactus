@@ -1,9 +1,16 @@
 import React from 'react';
 import '../assets/css/Contact.css';
-
+import '../assets/css/Home.css';
 function Contact() {
     return (
         <div className="contact-container">
+            <div className={"row"}>
+                <div className={"column"}>
+                  <div className={"logo-number-img"}>
+                      <img src="/public/logo-number.png" alt="logo-number"/>
+                  </div>
+                </div>
+            </div>
             <h1>Contact Us</h1>
             <div className="contact-form">
                 <form>

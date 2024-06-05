@@ -7,14 +7,24 @@ function Portfolio() {
             <h1>Portfolio</h1>
             <div className="portfolio-gallery">
                 <div className="portfolio-item">
-                    <img src="/portfolio-item-1.jpg" alt="Portfolio Item 1" />
-                    <h3>Portfolio Item 1</h3>
-                    <p>Description of Portfolio Item 1</p>
+                    <img src="/cactus-garden.jpeg" alt="Portfolio Item 1" />
+                    <h3>Cactus garden</h3>
+                    <p>Cactus in front porch area</p>
                 </div>
                 <div className="portfolio-item">
-                    <img src="/portfolio-item-2.jpg" alt="Portfolio Item 2" />
-                    <h3>Portfolio Item 2</h3>
-                    <p>Description of Portfolio Item 2</p>
+                    <img src="/cans-cactus.png" alt="Portfolio Item 2" />
+                    <h3>Can Casas </h3>
+                    <p>Cans as usable home for Cacti</p>
+                </div>
+                <div className="portfolio-item">
+                    <img src="/front-yard-landscaping.jpeg" alt="Portfolio Item 3" />
+                    <h3>Frontyard Steps</h3>
+                    <p>Flat stone curving around front yard</p>
+                </div>
+                <div className="portfolio-item">
+                    <img src="/xeriscape-cactus-yard.jpeg" alt="Portfolio Item 4" />
+                    <h3>Xeriscape In back yard</h3>
+                    <p>Gravel with cactus in residnetial back yard</p>
                 </div>
             </div>
         </div>

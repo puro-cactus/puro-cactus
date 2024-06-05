@@ -63,10 +63,13 @@ function Home() {
                         <img src="/hero-cactus.jpeg" alt="Puro Cactus"/>
                         <div className="overlay-hero">
                             <div className="overlay-hero-text">
-                                <p className="first-paragraph">At Puro Cactus, we recognize that your home environment is more than just a space - it's an extension of your lifestyle, your sanctuary, and your personal oasis. That's why we're committed to integrating nature's resilience and purity into every aspect of your home.</p>
-                                <p className={"second-paragraph"}>With a deep-rooted passion for sustainability and a dedication to excellence, our team of experts brings forth creativity, expertise, and meticulous attention to detail to every product we develop. Whether you envision eco-friendly home goods, organic skincare, or sustainable packaging, we possess the knowledge and proficiency to transform your sustainability dreams into reality.</p>
-                                <p>Yet, our focus extends beyond creating outstanding products - it's about fostering enduring relationships with our customers. We believe in transparent communication, honesty, and personalized service at every phase of our interaction. Your satisfaction is our foremost priority, and we're committed to going the extra mile to ensure that you're delighted with the end outcome.</p>
-                                <p>So whether you're seeking to rejuvenate your home with sustainable solutions or envisioning a brand new eco-friendly lifestyle, entrust the expertise of Puro Cactus to bring your vision to fruition. Get in touch with us today to explore our range of products and let's commence the journey of transforming your space with the purity and resilience of nature!</p>
+                                <h1 className="first-paragraph">
+                                    <strong>Puro Cactus</strong>
+                                </h1>
+                                <p className={"second-paragraph"}> Looking to transform your yard or need beautiful,
+                                    resilient plants? Discover our sustainable solutions and expert landscaping services
+                                    today!
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -134,7 +137,7 @@ function Home() {
 
                             >
                                 <motion.img
-                                    src="/artificial-grass.jpeg"
+                                    src="/cactus-nursery.png"
                                     alt="2nd image"
                                     className="animated-image"
                                 />
@@ -148,15 +151,14 @@ function Home() {
                                 }}
                                 transition={{duration: 1}}
                             >
-                                <span>Artificial Grass: A lush green lawn crafted from high-quality synthetic turf, offering the look and feel of natural grass without the need for watering or mowing. Perfectly manicured and evergreen, it provides a vibrant and low-maintenance solution for residential and commercial landscapes.</span>
+                                <span>Cactus Nursery: A vibrant oasis of hardy succulents, offering a diverse collection of cacti in various shapes and sizes. These low-maintenance plants bring a touch of desert charm to any space, thriving with minimal water and care. Ideal for both indoor and outdoor settings, our cacti add unique texture and beauty, transforming landscapes into stunning, drought-tolerant displays.</span>
                             </motion.div>
                         </div>
                     </div>
 
                     <div className="space">
                         <span>
-                            Artificial grass is an eco-friendly landscaping solution that conserves water, reduces chemical usage, and minimizes carbon emissions. It requires no watering, pesticides, or fertilizers, making it an environmentally sustainable alternative to traditional lawns.
-                        </span>
+Cactus Nursery An eco-friendly haven of resilient succulents that conserve water and reduce chemical usage. These hardy plants thrive without the need for frequent watering, pesticides, or fertilizers, offering an environmentally sustainable alternative to traditional gardens.                         </span>
                     </div>
 
                     <div className="main-content">
@@ -188,7 +190,8 @@ function Home() {
                                 }}
                                 transition={{duration: 1}}
                             >
-                                <span>Cactus Garden: A striking display of desert flora, featuring an array of cacti and succulents in various shapes and sizes. Against a backdrop of sandy soil and rugged rocks, these hardy plants thrive in arid conditions, showcasing their unique forms and resilience.</span>
+                                <span>
+Backyard Oasis Landscaping: Transform your outdoor space into a stunning retreat with our premium services. We create custom-designed backyards featuring lush greenery, serene water features, and elegant hardscapes. Our expert team crafts inviting patios, pathways, and cozy seating areas, ensuring a breathtaking and functional backyard you'll love year-round.                                </span>
                             </motion.div>
 
                         </div>
