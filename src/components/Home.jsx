@@ -79,7 +79,7 @@ function Home() {
                     <div className="main-content">
                         <div className={"row"}>
                             <div className={"column"}>
-                                <h1 className={"main-content-title"}>
+                                <h1 className={"main-content-title space-50"}>
                                     Services
                                 </h1>
                             </div>
@@ -116,7 +116,7 @@ function Home() {
                         </div>
                     </div>
 
-                    <div className="space">
+                    <div className="space-100">
                         <span>
                             Xeriscaping is a water-efficient landscaping method that utilizes drought-tolerant plants and sustainable irrigation techniques to conserve water and promote biodiversity. By incorporating native plants and minimizing lawn areas, xeriscaping helps conserve water, enhance soil health, and support local ecosystems.
                         </span>
@@ -156,13 +156,13 @@ function Home() {
                         </div>
                     </div>
 
-                    <div className="space">
+                    <div className="space-100">
                         <span>
 Cactus Nursery An eco-friendly haven of resilient succulents that conserve water and reduce chemical usage. These hardy plants thrive without the need for frequent watering, pesticides, or fertilizers, offering an environmentally sustainable alternative to traditional gardens.                         </span>
                     </div>
 
                     <div className="main-content">
-                        <div className="row content-card">
+                        <div className="row content-card ">
                             <motion.div
                                 ref={ref3}
                                 className="column image-container"
@@ -197,7 +197,7 @@ Backyard Oasis Landscaping: Transform your outdoor space into a stunning retreat
                         </div>
                     </div>
 
-                    <div className="space">
+                    <div className="space-100">
                         <span>
                             A cactus garden is a low-maintenance and water-efficient landscaping option that thrives in arid climates. Cacti are well-adapted to dry conditions, requiring minimal water and maintenance while providing unique aesthetic appeal. Cactus gardens contribute to biodiversity by providing habitat for desert wildlife and promoting sustainable landscaping practices.
                         </span>
@@ -235,6 +235,7 @@ Backyard Oasis Landscaping: Transform your outdoor space into a stunning retreat
                                 <span>Cactus Garden: A striking display of desert flora, featuring an array of cacti and succulents in various shapes and sizes. Against a backdrop of sandy soil and rugged rocks, these hardy plants thrive in arid conditions, showcasing their unique forms and resilience.</span>
                             </motion.div>
                         </div>
+                        <div className={"space-50"}></div>
                     </div>
                 </div>
             </div>
