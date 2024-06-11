@@ -5,8 +5,8 @@ function AboutUs() {
     return (
         <div className="about-us-container">
             <h1>About Us</h1>
-            <div className="about-us-content">
-                <p>Welcome to Puro Cactus, your premier landscaping partner in San Antonio.</p>
+            <div className="about-us-content space">
+                <h2>Welcome to Puro Cactus, your premier landscaping partner in San Antonio.</h2>
                 <p>At Puro Cactus, we understand the importance of your outdoor space. It's not just a backyard; it's an extension of your home, a sanctuary, and a personal oasis. That's why we're dedicated to transforming ordinary yards into Texas natural oases that reflect your unique style and aspirations.</p>
                 <p>With a team of seasoned landscapers who are passionate about nature and committed to excellence, we bring creativity, expertise, and attention to detail to every project. Whether you dream of a lush, water-efficient xeriscape, vibrant native flower beds, or a modern, tranquil outdoor living area, we have the knowledge and skills to turn your landscaping dreams into reality.</p>
                 <p>From initial design concepts to flawless installation and ongoing maintenance, we work closely with each client to ensure their outdoor space exceeds expectations. We take pride in delivering exceptional results that enhance the beauty, functionality, and sustainability of your property.</p>

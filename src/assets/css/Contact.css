@@ -73,6 +73,7 @@
 .form-group textarea {
     resize: vertical;
     min-height: 150px;
+    display: block;
 }
 
 button[type="submit"] {

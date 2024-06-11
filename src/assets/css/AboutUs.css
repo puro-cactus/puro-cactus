@@ -23,7 +23,12 @@
 
 .about-us-content {
     color: #ffffff;
-    line-height: 1.6;
+    line-height: 1.8;
     font-size: 20px;
-    background: rgba(27, 27, 27, 0.43);
+    background: rgba(27, 27, 27, 0.27);
+    border-radius: 10px;
 }
+.space {
+    padding: 25px 20px;
+}
+
