@@ -47,7 +47,9 @@ const Layout = () => {
         <div className="layout-container">
             <header className="header">
                 <div className="navbar" ref={navRef}>
-                    <img className={`logo logo-nav ${menuOpen ? 'opacity-0' : ''}`} src="/puro-cuctus-LOGO.PNG" alt="LOGO" />
+                    <Link to={"/"}>
+                        <img className={`logo logo-nav ${menuOpen ? 'opacity-0' : ''}`} src="/puro-cuctus-LOGO.PNG" alt="LOGO" />
+                    </Link>
                     <nav className="nav">
                         <button className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
                             <div></div>

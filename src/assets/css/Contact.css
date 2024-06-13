@@ -9,15 +9,16 @@
 }
 
 .logo-number-img {
-    width: 50%;
+
     aspect-ratio: auto;
     align-items: center;
     justify-content: center;
-    padding-left: 25%;
+    /*padding-left: 25%;*/
 }
 
 .logo-number-img img{
     border-radius: 5px;
+    width: 100%;
 }
 
 .row {
