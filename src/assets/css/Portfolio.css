@@ -16,7 +16,7 @@
 
 /* Portfolio Container */
 .portfolio-container {
-    padding: 20px;
+    padding-top: 10%;
     background: var(--gradient-bg);
     width: 100%;
     min-height: 500px;

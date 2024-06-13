@@ -1,10 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import '../assets/css/Home.css';
-import '../assets/css/layout.css'
+import '../assets/css/layout.css';
 
 const Layout = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [isNavFixed, setIsNavFixed] = useState(false);
     const navRef = useRef(null);
 
     useEffect(() => {
@@ -35,6 +36,22 @@ const Layout = () => {
         };
     }, []);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 100) { // Adjust the scroll position as needed
+                setIsNavFixed(true);
+            } else {
+                setIsNavFixed(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
@@ -45,7 +62,7 @@ const Layout = () => {
 
     return (
         <div className="layout-container">
-            <header className="header">
+            <header className={`header ${isNavFixed ? 'fixed' : ''}`}>
                 <div className="navbar" ref={navRef}>
                     <Link to={"/"}>
                         <img className={`logo logo-nav ${menuOpen ? 'opacity-0' : ''}`} src="/puro-cuctus-LOGO.PNG" alt="LOGO" />
