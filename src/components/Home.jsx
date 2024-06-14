@@ -116,7 +116,7 @@ function Home() {
                         </div>
                     </div>
 
-                    <div className="space-100">
+                    <div className="space-100 span-padding">
                         <span>
                             Xeriscaping is a water-efficient landscaping method that utilizes drought-tolerant plants and sustainable irrigation techniques to conserve water and promote biodiversity. By incorporating native plants and minimizing lawn areas, xeriscaping helps conserve water, enhance soil health, and support local ecosystems.
                         </span>
@@ -156,7 +156,7 @@ function Home() {
                         </div>
                     </div>
 
-                    <div className="space-100">
+                    <div className="space-100 span-padding">
                         <span>
 Cactus Nursery An eco-friendly haven of resilient succulents that conserve water and reduce chemical usage. These hardy plants thrive without the need for frequent watering, pesticides, or fertilizers, offering an environmentally sustainable alternative to traditional gardens.                         </span>
                     </div>
@@ -197,7 +197,7 @@ Backyard Oasis Landscaping: Transform your outdoor space into a stunning retreat
                         </div>
                     </div>
 
-                    <div className="space-100">
+                    <div className="space-100 span-padding">
                         <span>
                             A cactus garden is a low-maintenance and water-efficient landscaping option that thrives in arid climates. Cacti are well-adapted to dry conditions, requiring minimal water and maintenance while providing unique aesthetic appeal. Cactus gardens contribute to biodiversity by providing habitat for desert wildlife and promoting sustainable landscaping practices.
                         </span>

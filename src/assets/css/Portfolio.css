@@ -16,11 +16,19 @@
 
 /* Portfolio Container */
 .portfolio-container {
-    padding-top: 10%;
+    padding-top: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
     background: var(--gradient-bg);
     width: 100%;
-    min-height: 500px;
+    min-height: 80vh;
     color: #fff;
+}
+@media screen and (max-width: 768px) {
+    .portfolio-container{
+        padding-top: 10%;
+
+    }
 }
 
 .portfolio-container h1 {

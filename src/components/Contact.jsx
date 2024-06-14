@@ -42,6 +42,9 @@ function Contact() {
 
     return (
         <div className="contact-container">
+            <div className={"contact-header"}>
+                <h1 className={"contact-us-header"}>Contact Us</h1>
+            </div>
             <div className="row">
                 <div className="column">
                     <div className="logo-number-img">
@@ -50,7 +53,6 @@ function Contact() {
                 </div>
 
                 <div className={"column"}>
-                    <h1>Contact Us</h1>
                     <div className="contact-form">
                         <form onSubmit={handleSubmit}>
                             <div className="form-group">

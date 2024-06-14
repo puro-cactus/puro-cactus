@@ -80,7 +80,7 @@ const Layout = () => {
                             <li><Link to="/about" onClick={handleCloseButtonClick}>About Us</Link></li>
                             <li><Link to="/contact" onClick={handleCloseButtonClick}>Contact</Link></li>
                             {menuOpen && (
-                                <button className="close-button" onClick={handleCloseButtonClick}>&times;</button>
+                                <button className="close-button" onClick={handleCloseButtonClick}></button>
                             )}
                         </ul>
                     </nav>

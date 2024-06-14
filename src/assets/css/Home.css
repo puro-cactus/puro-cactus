@@ -216,9 +216,11 @@ body {
 
 @media screen and (max-width: 768px) {
     .image-container {
-        width: 100%; /* Change the width to full width on smaller screens */
+        width: 100%;
     }
-
+    .image-text-container {
+        font-size: .75em;
+    }
     .column {
         width: 100%;
     }
@@ -312,9 +314,10 @@ body {
 
 /* Media query to hide paragraphs except the first one on smaller screens */
 @media (max-width: 768px) {
-    .overlay-hero-text p {
-        display: none;
+    .overlay-hero-text {
+        font-size: 1em;
     }
+
 
     .overlay-hero-text .first-paragraph {
         display: block;
@@ -334,4 +337,9 @@ body {
 .space-100 {
     padding-top: 100px;
     padding-bottom: 100px;
+}
+
+.span-padding {
+    padding-left: 5%;
+    padding-right: 5%;
 }
