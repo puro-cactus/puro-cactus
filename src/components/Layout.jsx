@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import '../assets/css/Home.css';
-import '../assets/css/layout.css';
 
 const Layout = () => {
     const [menuOpen, setMenuOpen] = useState(false);

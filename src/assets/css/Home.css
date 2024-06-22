@@ -8,6 +8,10 @@
             hsl(7, 67%, 68%) 100%
     );
 }
+.layout-container{
+    background: var(--gradient-bg);
+    padding: unset;
+}
 
 .hidden {
     display: none;
@@ -114,9 +118,9 @@ body {
     width: 100%; /* Ensure the navbar spans the full width of its container */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     position: fixed; /* Make the navbar fixed */
-    top: 0; /* Position it at the top */
-    left: 0; /* Position it at the left edge */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 8px rgba(255, 254, 254, 0.2); /* Optional: Add a shadow for better visibility */
 }
 
 .nav {
