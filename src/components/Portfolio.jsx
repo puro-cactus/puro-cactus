@@ -53,6 +53,8 @@ function Portfolio() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [selectedItem, setSelectedItem] = useState(null);
     const [modalImages, setModalImages] = useState([]);
+    const [showHoverMessage, setShowHoverMessage] = useState(false);
+    const [hoveredOnce, setHoveredOnce] = useState(false);
     const carouselRef = useRef(null);
 
     const openModal = (item, images) => {
@@ -73,12 +75,25 @@ function Portfolio() {
         }
     }, [modalIsOpen]);
 
+    const handleHover = () => {
+        if (!hoveredOnce) {
+            setShowHoverMessage(true);
+            setHoveredOnce(true);
+            setTimeout(() => setShowHoverMessage(false), 4000); // Hide message after 4 seconds
+        }
+    };
+
     return (
         <div className="portfolio-container">
             <h1>Portfolio</h1>
             <div className="portfolio-gallery">
                 {portfolioItems.map((item, index) => (
-                    <div key={index} className="portfolio-item" onClick={() => openModal(item, item.related)}>
+                    <div
+                        key={index}
+                        className="portfolio-item"
+                        onMouseEnter={handleHover}
+                        onClick={() => openModal(item, item.related)}
+                    >
                         <img
                             src={item.images[0]}
                             alt={`Portfolio Item ${index + 1}`}
@@ -111,6 +126,11 @@ function Portfolio() {
                     </Carousel>
                     <button onClick={closeModal} className="close-button"></button>
                 </Modal>
+            )}
+            {showHoverMessage && (
+                <div className="hover-message font">
+                    Click on an item to see more images
+                </div>
             )}
         </div>
     );

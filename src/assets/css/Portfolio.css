@@ -154,3 +154,28 @@
     transition: background-color 0.3s;
 }
 
+/* Hover Message */
+.hover-message {
+    position: fixed;
+    top: 150px;
+    left: 78%;
+    background-color: rgba(0, 0, 0, 0.77);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1001;
+    font-size: 1.5rem;
+    animation: fade-in-out 4s forwards;
+}
+
+@keyframes fade-in-out {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+.font{
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
