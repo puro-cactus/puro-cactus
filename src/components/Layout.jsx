@@ -1,11 +1,14 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import React, {useState, useRef, useEffect} from 'react';
+import {Outlet, Link} from 'react-router-dom';
 import '../assets/css/Home.css';
 
 const Layout = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isNavFixed, setIsNavFixed] = useState(false);
     const navRef = useRef(null);
+    const [isNavTransparent, setIsNavTransparent] = useState(false);
+// set background opacity to be slightly see through
+
 
     useEffect(() => {
         const handleResize = () => {
@@ -39,6 +42,7 @@ const Layout = () => {
         const handleScroll = () => {
             if (window.scrollY > 100) { // Adjust the scroll position as needed
                 setIsNavFixed(true);
+                setIsNavTransparent(true)
             } else {
                 setIsNavFixed(false);
             }
@@ -64,7 +68,8 @@ const Layout = () => {
             <header className={`header ${isNavFixed ? 'fixed' : ''}`}>
                 <div className="navbar" ref={navRef}>
                     <Link to={"/"}>
-                        <img className={`logo logo-nav ${menuOpen ? 'opacity-0' : ''}`} src="/puro-cuctus-LOGO.PNG" alt="LOGO" />
+                        <img className={`logo logo-nav ${menuOpen ? 'opacity-0' : ''}`} src="/puro-cactus-logo.PNG"
+                             alt="LOGO"/>
                     </Link>
                     <nav className="nav">
                         <button className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
@@ -87,12 +92,26 @@ const Layout = () => {
             </header>
 
             <main className="main-content">
-                <Outlet />
+                <Outlet/>
             </main>
 
             <footer className="footer">
                 <hr/>
-                <p>&copy; 2024 Puro Cactus Nursery | Landscaping</p>
+                <div className={"row"}>
+                    <li>
+                        <div className="column justify-content-star pad-l-50wt">
+                            <p>&copy; 2024 Puro Cactus xeriscape | Landscaping design</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="column justify-content-end">
+                            <div className="logo-number-img">
+                                <img src="/public/puro-cactus-logo-v1.png" alt="logo-number"/>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+
             </footer>
         </div>
     );

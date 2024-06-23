@@ -347,3 +347,14 @@ body {
     padding-left: 5%;
     padding-right: 5%;
 }
+
+.justify-content-end{
+    justify-content: end;
+}
+
+.justify-content-start{
+    justify-content:start;
+}
+.pad-l-50w{
+
+}

@@ -46,11 +46,11 @@ function Contact() {
                 <h1 className={"contact-us-header"}>Contact Us</h1>
             </div>
             <div className="row">
-                <div className="column">
-                    <div className="logo-number-img">
-                        <img src="/public/logo-number.png" alt="logo-number"/>
-                    </div>
-                </div>
+                {/*<div className="column">*/}
+                {/*    <div className="logo-number-img">*/}
+                {/*        <img src="/public/puro-cactus-logo-v1.png" alt="logo-number"/>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
 
                 <div className={"column"}>
                     <div className="contact-form">
