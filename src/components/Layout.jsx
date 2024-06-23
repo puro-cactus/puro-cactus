@@ -6,9 +6,6 @@ const Layout = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isNavFixed, setIsNavFixed] = useState(false);
     const navRef = useRef(null);
-    const [isNavTransparent, setIsNavTransparent] = useState(false);
-// set background opacity to be slightly see through
-
 
     useEffect(() => {
         const handleResize = () => {
@@ -40,9 +37,8 @@ const Layout = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 100) { // Adjust the scroll position as needed
+            if (window.scrollY > 100) { // Change the background color when scroll is greater than 10
                 setIsNavFixed(true);
-                setIsNavTransparent(true)
             } else {
                 setIsNavFixed(false);
             }
@@ -66,12 +62,12 @@ const Layout = () => {
     return (
         <div className="layout-container">
             <header className={`header ${isNavFixed ? 'fixed' : ''}`}>
-                <div className="navbar" ref={navRef}>
+                <div className="navbar" ref={navRef} style={{ backgroundColor: isNavFixed ? '#DC204BE0' : '' }}>
                     <Link to={"/"}>
                         <img className={`logo logo-nav ${menuOpen ? 'opacity-0' : ''}`} src="/puro-cactus-logo.PNG"
                              alt="LOGO"/>
                     </Link>
-                    <nav className="nav">
+                    <nav className="nav" >
                         <button className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
                             <div></div>
                             <div></div>
@@ -97,21 +93,21 @@ const Layout = () => {
 
             <footer className="footer">
                 <hr/>
-                <div className={"row"}>
-                    <li>
-                        <div className="column justify-content-star pad-l-50wt">
-                            <p>&copy; 2024 Puro Cactus xeriscape | Landscaping design</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="column justify-content-end">
-                            <div className="logo-number-img">
-                                <img src="/public/puro-cactus-logo-v1.png" alt="logo-number"/>
-                            </div>
-                        </div>
-                    </li>
-                </div>
+                <div className="row">
+                    <div className="column justify-content-start">
+                        <p>&copy; 2024 Puro Cactus Xeriscape & Landscaping Design</p>
+                    </div>
+                    <div className="column justify-content-end">
+                        <div className="BDT-footer">
 
+                                <img src="/public/BDT-favicon.png" alt="logo-number"/>
+                                <p>Website created and maintained by
+                                <a href="https://barreddoortechnologies.com/" target="_blank"
+                                   rel="noopener noreferrer"> Barred Door Technologies</a></p>
+
+                        </div>
+                    </div>
+                </div>
             </footer>
         </div>
     );

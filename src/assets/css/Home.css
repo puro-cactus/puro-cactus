@@ -1,4 +1,9 @@
 /* Global Styles */
+/*
+This also includes all my Layout css for nav bar , footer
+Main css file
+
+*/
 :root {
     --gradient-bg: linear-gradient(
             90deg,
@@ -8,7 +13,8 @@
             hsl(7, 67%, 68%) 100%
     );
 }
-.layout-container{
+
+.layout-container {
     background: var(--gradient-bg);
     padding: unset;
 }
@@ -222,9 +228,11 @@ body {
     .image-container {
         width: 100%;
     }
+
     .image-text-container {
         font-size: .75em;
     }
+
     .column {
         width: 100%;
     }
@@ -261,15 +269,41 @@ body {
     width: 100%;
 }
 
+
 /* Footer */
 .footer {
     color: #fff;
     padding: 20px 0;
-    text-align: center;
     background: var(--gradient-bg);
 }
 
-/* New styles for the overlay effect */
+.footer a {
+    text-decoration: unset;
+    color: #ffffff;
+}
+
+.footer .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.BDT-footer {
+    display: flex;
+    align-items: center;
+}
+
+.BDT-footer img {
+    width: 20px;
+    aspect-ratio: 1;
+    margin-right: 10px; /* Adjust the spacing between the image and the text */
+}
+
+.BDT-footer p {
+    margin: 0; /* Remove default margins */
+}
+
+
 .overlay-container {
     position: relative; /* Position relative for absolute positioning of text */
     width: 100%;
@@ -296,12 +330,12 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(rgba(4, 1, 21, 0.37), rgba(2, 6, 30, 0.36)); /* Gradient background for readability */
-    border: 1px solid; /* Define a solid border to apply border-image to */
+    border: 1px solid;
     border-image-source: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)); /* Gradient for border image */
-    border-image-slice: 1; /* Ensure the border image covers the entire border area */
-    border-image-width: 10px; /* Define the width of the border image */
-    border-image-outset: 0; /* Optional: define the amount by which the border image area extends beyond the border box */
-    border-image-repeat: stretch; /* Ensure the border image stretches to fill the entire border */
+    border-image-slice: 1;
+    border-image-width: 10px;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
 }
 
 .overlay-hero-text {
@@ -316,7 +350,7 @@ body {
     font-size: 4em;
 }
 
-/* Media query to hide paragraphs except the first one on smaller screens */
+/* Media query to hide paragraphs on smaller screens */
 @media (max-width: 768px) {
     .overlay-hero-text {
         font-size: 1em;
@@ -348,13 +382,10 @@ body {
     padding-right: 5%;
 }
 
-.justify-content-end{
+.justify-content-end {
     justify-content: end;
 }
 
-.justify-content-start{
-    justify-content:start;
-}
-.pad-l-50w{
-
+.justify-content-start {
+    justify-content: start;
 }

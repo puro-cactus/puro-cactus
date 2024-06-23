@@ -31,7 +31,9 @@
     align-items: center;
 }
 
-
+.justify-content-end{
+    justify-content: end;
+}
 .column {
     width: 100%;
 }
