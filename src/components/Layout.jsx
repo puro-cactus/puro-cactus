@@ -37,7 +37,7 @@ const Layout = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 100) { // Change the background color when scroll is greater than 10
+            if (window.scrollY > 90) {
                 setIsNavFixed(true);
             } else {
                 setIsNavFixed(false);
@@ -62,12 +62,12 @@ const Layout = () => {
     return (
         <div className="layout-container">
             <header className={`header ${isNavFixed ? 'fixed' : ''}`}>
-                <div className="navbar" ref={navRef} style={{ backgroundColor: isNavFixed ? '#DC204BE0' : '' }}>
+                <div className="navbar" ref={navRef} style={{backgroundColor: isNavFixed ? '#DC204BE0' : ''}}>
                     <Link to={"/"}>
                         <img className={`logo logo-nav ${menuOpen ? 'opacity-0' : ''}`} src="/puro-cactus-logo.PNG"
                              alt="LOGO"/>
                     </Link>
-                    <nav className="nav" >
+                    <nav className="nav">
                         <button className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
                             <div></div>
                             <div></div>
@@ -93,18 +93,21 @@ const Layout = () => {
 
             <footer className="footer">
                 <hr/>
-                <div className="row">
-                    <div className="column justify-content-start">
-                        <p>&copy; 2024 Puro Cactus Xeriscape & Landscaping Design</p>
+                <div className="column">
+                    <div className={"row"}>
+                        <div className="column justify-content-center">
+                            <p>&copy; 2024 Puro Cactus Xeriscape & Landscaping Design</p>
+                        </div>
                     </div>
-                    <div className="column justify-content-end">
-                        <div className="BDT-footer">
+                    <div className={"row"}>
+                        <div className="column justify-content-center">
+                            <div className="BDT-footer">
 
                                 <img src="/public/BDT-favicon.png" alt="logo-number"/>
                                 <p>Website created and maintained by
-                                <a href="https://barreddoortechnologies.com/" target="_blank"
-                                   rel="noopener noreferrer"> Barred Door Technologies</a></p>
-
+                                    <a href="https://barreddoortechnologies.com/" target="_blank"
+                                       rel="noopener noreferrer"> Barred Door Technologies</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>

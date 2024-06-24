@@ -275,11 +275,13 @@ body {
     color: #fff;
     padding: 20px 0;
     background: var(--gradient-bg);
+    font-size: 1.5rem;
 }
 
 .footer a {
     text-decoration: unset;
     color: #ffffff;
+    font-size: 1.6rem;
 }
 
 .footer .row {
@@ -290,17 +292,19 @@ body {
 
 .BDT-footer {
     display: flex;
+    justify-content: center;
     align-items: center;
+    font-size: 1.5rem;
 }
 
 .BDT-footer img {
-    width: 20px;
+    width: 30px;
     aspect-ratio: 1;
-    margin-right: 10px; /* Adjust the spacing between the image and the text */
+    margin-right: 5px;
 }
 
 .BDT-footer p {
-    margin: 0; /* Remove default margins */
+    margin: 0;
 }
 
 
@@ -385,7 +389,9 @@ body {
 .justify-content-end {
     justify-content: end;
 }
-
+.justify-content-center{
+    justify-content: center;
+}
 .justify-content-start {
     justify-content: start;
 }
