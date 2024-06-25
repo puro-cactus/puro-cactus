@@ -79,7 +79,7 @@ function Home() {
                     <div className="main-content">
                         <div className={"row"}>
                             <div className={"column"}>
-                                <h1 className={"main-content-title space-50"}>
+                                <h1 className={"main-content-title"}>
                                     Services
                                 </h1>
                             </div>
@@ -93,7 +93,7 @@ function Home() {
                                     x: inView1 ? 0 : '-200px',
                                     opacity: inView1 ? 1 : 0,
                                 }}
-                                transition={{duration: 1}}
+                                transition={{duration: .5}}
                                 onAnimationComplete={() => logInViewRef('ref1', inView1)} // Here's where you call logInViewRef
                             >
                                 <motion.img
@@ -109,16 +109,16 @@ function Home() {
                                     x: inView1 ? 0 : '200px',
                                     opacity: inView1 ? 1 : 0,
                                 }}
-                                transition={{duration: 1}}
+                                transition={{duration: .5}}
                             >
-                                <span>Xeriscape: A serene landscape featuring drought-resistant plants and succulents, arranged in a harmonious composition. The muted color palette and geometric patterns create a tranquil oasis that requires minimal maintenance, perfect for arid climates.</span>
+                                <span>Xeriscape: A serene landscape featuring drought-resistant plants and succulents, arranged in a harmonious composition.</span>
                             </motion.div>
                         </div>
                     </div>
 
                     <div className="space-100 span-padding">
                         <span>
-                            Xeriscaping is a water-efficient landscaping method that utilizes drought-tolerant plants and sustainable irrigation techniques to conserve water and promote biodiversity. By incorporating native plants and minimizing lawn areas, xeriscaping helps conserve water, enhance soil health, and support local ecosystems.
+                            Xeriscaping is a landscaping method that utilizes drought-tolerant plants and sustainable techniques to conserve water and promote biodiversity. By incorporating native plants, this conserve water, enhance soil health, and support local ecosystems.
                         </span>
                     </div>
 
@@ -132,7 +132,7 @@ function Home() {
                                     x: inView2 ? 0 : '-200px',
                                     opacity: inView2 ? 1 : 0,
                                 }}
-                                transition={{duration: 1}}
+                                transition={{duration: .5}}
                                 onAnimationComplete={() => logInViewRef('ref2', inView2)} // Here's where you call logInViewRef
 
                             >
@@ -149,9 +149,9 @@ function Home() {
                                     x: inView2 ? 0 : '200px',
                                     opacity: inView2 ? 1 : 0,
                                 }}
-                                transition={{duration: 1}}
+                                transition={{duration: .5}}
                             >
-                                <span>Cactus Nursery: A vibrant oasis of hardy succulents, offering a diverse collection of cacti in various shapes and sizes. These low-maintenance plants bring a touch of desert charm to any space, thriving with minimal water and care. Ideal for both indoor and outdoor settings, our cacti add unique texture and beauty, transforming landscapes into stunning, drought-tolerant displays.</span>
+                                <span>Cactus Nursery: A vibrant oasis of hardy succulents, offering a diverse collection of cacti in various shapes and sizes. These low-maintenance plants bring a touch of desert charm to any space, thriving with minimal water and care.</span>
                             </motion.div>
                         </div>
                     </div>
@@ -171,7 +171,7 @@ Cactus Nursery An eco-friendly haven of resilient succulents that conserve water
                                     x: inView3 ? 0 : '-200px',
                                     opacity: inView3 ? 1 : 0,
                                 }}
-                                transition={{duration: 1}}
+                                transition={{duration: .5}}
                                 onAnimationComplete={() => logInViewRef('ref3', inView3)} // Here's where you call logInViewRef
 
                             >
@@ -188,10 +188,10 @@ Cactus Nursery An eco-friendly haven of resilient succulents that conserve water
                                     x: inView3 ? 0 : '200px',
                                     opacity: inView3 ? 1 : 0,
                                 }}
-                                transition={{duration: 1}}
+                                transition={{duration: .5}}
                             >
                                 <span>
-Backyard Oasis Landscaping: Transform your outdoor space into a stunning retreat with our premium services. We create custom-designed backyards featuring lush greenery, serene water features, and elegant hardscapes. Our expert team crafts inviting patios, pathways, and cozy seating areas, ensuring a breathtaking and functional backyard you'll love year-round.                                </span>
+Backyard Oasis Landscaping: Transform your outdoor space into a stunning retreat with our premium services. We create custom-designed backyards featuring lush greenery, serene water features. Our expert team crafts inviting patios, pathways, and cozy seating areas.</span>
                             </motion.div>
 
                         </div>
@@ -213,7 +213,7 @@ Backyard Oasis Landscaping: Transform your outdoor space into a stunning retreat
                                     x: inView4 ? 0 : '-200px',
                                     opacity: inView4 ? 1 : 0,
                                 }}
-                                transition={{duration: 1}}
+                                transition={{duration: .5}}
                                 onAnimationComplete={() => logInViewRef('ref4', inView4)} // Here's where you call logInViewRef
 
                             >
@@ -230,7 +230,7 @@ Backyard Oasis Landscaping: Transform your outdoor space into a stunning retreat
                                     x: inView4 ? 0 : '200px',
                                     opacity: inView4 ? 1 : 0,
                                 }}
-                                transition={{duration: 1}}
+                                transition={{duration: .5}}
                             >
                                 <span>Cactus Garden: A striking display of desert flora, featuring an array of cacti and succulents in various shapes and sizes. Against a backdrop of sandy soil and rugged rocks, these hardy plants thrive in arid conditions, showcasing their unique forms and resilience.</span>
                             </motion.div>

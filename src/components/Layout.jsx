@@ -106,7 +106,7 @@ const Layout = () => {
                                 <img src="/public/BDT-favicon.png" alt="logo-number"/>
                                 <p>Website created and maintained by
                                     <a href="https://barreddoortechnologies.com/" target="_blank"
-                                       rel="noopener noreferrer"> Barred Door Technologies</a></p>
+                                       rel="noopener noreferrer" className={"BDT-link"}> Barred Door Technologies</a></p>
                             </div>
                         </div>
                     </div>
