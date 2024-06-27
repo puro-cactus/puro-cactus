@@ -4,7 +4,7 @@ import {useInView} from 'react-intersection-observer';
 import '../assets/css/Home.css';
 
 function Home() {
-    const [menuOpen, setMenuOpen] = useState(false);
+    // const [menuOpen, setMenuOpen] = useState(false);
     const navRef = useRef(null);
 
     const [ref1, inView1] = useInView({
