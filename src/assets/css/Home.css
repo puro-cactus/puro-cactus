@@ -6,7 +6,8 @@
     --gradient-bg: linear-gradient(90deg, rgba(21, 177, 194, 1) 10%, rgba(255, 199, 0, 1) 50%, rgba(21, 177, 194, 1) 90%);
     --green-bg: #58a540;
     --blue-bg: #256694;
-    --light-orange-bg: rgba(255, 199, 0, 1)
+    --light-orange-bg: #F3B834;
+    --hot-pink: #EF426F
 }
 
 .layout-container {
@@ -28,6 +29,10 @@ body {
     background-color: var(--blue-bg);;
     background-size: auto;
     overflow-x: hidden; /* Disable horizontal scrolling */
+}
+
+.color-blue {
+    color: var(--blue-bg);
 }
 
 .home-container {
@@ -204,7 +209,8 @@ body {
 /* Footer */
 .footer {
     color: #ffffff;
-    padding: 1px 0;
+    padding-bottom: 30px;
+    padding-top: 10px;
     background: var(--light-orange-bg);
     font-size: 1.1rem;
     width: 100%;
@@ -212,7 +218,7 @@ body {
 
 .footer a {
     text-decoration: unset;
-    color: #ffffff;
+    color: var(--blue-bg);
     font-size: 1.1rem;
 }
 
@@ -246,11 +252,6 @@ body {
     color: white;
 }
 
-.animated-image {
-    object-fit: fill;
-    background: white;
-}
-
 .overlay-container img {
     width: 100%;
     height: auto;
@@ -269,9 +270,9 @@ body {
     border-radius: 10px;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(4, 1, 21, 0.37), rgba(2, 6, 30, 0.36)); /* Gradient background for readability */
+    background: linear-gradient(rgba(255, 255, 255, 0.29), rgba(255, 255, 255, 0.37)); /* Gradient background for readability */
     border: 1px solid;
-    border-image-source: linear-gradient(rgb(227, 9, 45), rgb(238, 8, 46)); /* Gradient for border image */
+    border-image-source: linear-gradient(rgb(239, 66, 111), rgb(239, 66, 111)); /* Gradient for border image */
     border-image-slice: 1;
     border-image-width: 10px;
     border-image-outset: 0;
@@ -280,9 +281,10 @@ body {
 
 .overlay-hero-text {
     font-size: 2em;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: center;
+    color: black;
 }
 
 .overlay-hero h1 {
@@ -291,24 +293,7 @@ body {
 }
 
 /* Utility Classes */
-.space-50 {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
 
-.space-100 {
-    padding-top: 100px;
-}
-
-.span-padding {
-    padding-left: 5%;
-    padding-right: 5%;
-    font-size: 20px;
-}
-
-.color-test {
-    color: rgb(255, 255, 255);
-}
 
 .justify-content-end {
     justify-content: end;
@@ -320,6 +305,12 @@ body {
 
 .justify-content-start {
     justify-content: start;
+}
+
+.fourth-paragraph-contact-link {
+    color: black;
+    text-decoration-color: black;
+
 }
 
 /* Media Queries */

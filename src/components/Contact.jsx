@@ -51,15 +51,15 @@ function Contact() {
             <h1 className="contact-header">Contact Us</h1>
             <form className="contact-form" ref={form} onSubmit={sendEmail}>
                 <div className="form-group">
-                    <label>Name</label>
+                    <label className={"contact-label"}>Name</label>
                     <input required={true} type="text" name="user_name" placeholder={"Enter your name"}/>
                 </div>
                 <div className="form-group">
-                    <label>Email</label>
+                    <label className={"contact-label"}>Email</label>
                     <input required={true} type="email" name="user_email" placeholder={"Enter your email"}/>
                 </div>
                 <div className="form-group">
-                    <label>Message</label>
+                    <label className={"contact-label"}>Message</label>
                     <textarea required={true} name="message" placeholder={"Enter a message you'd like to send to Purocactus's team"}/>
                 </div>
                 <button type="submit">Send</button>

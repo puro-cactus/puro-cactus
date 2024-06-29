@@ -96,7 +96,7 @@ const Layout = () => {
                 <hr/>
                 <div className="column">
                     <div className={"row"}>
-                        <div className="column justify-content-center">
+                        <div className="column justify-content-center color-blue">
                             <p>&copy; 2024 Puro Cactus Xeriscape & Landscaping Design</p>
                         </div>
                     </div>
@@ -105,9 +105,9 @@ const Layout = () => {
                             <div className="BDT-footer">
 
                                 <img src="/public/BDT-favicon.png" alt="logo-number"/>
-                                <p>Website created and maintained by
+                                <p className={"color-blue"}>Website created and maintained by
                                     <a href="https://barreddoortechnologies.com/" target="_blank"
-                                       rel="noopener noreferrer" className={"BDT-link"}> Barred Door Technologies</a>
+                                       rel="noopener noreferrer" className={"BDT-link color-blue"}> Barred Door Technologies</a>
                                 </p>
                             </div>
                         </div>
