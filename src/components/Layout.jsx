@@ -62,9 +62,10 @@ const Layout = () => {
     return (
         <div className="layout-container">
             <header className={`header ${isNavFixed ? 'fixed' : ''}`}>
-                <div className="navbar" ref={navRef} style={{backgroundColor: isNavFixed ? '#DC204BE0' : ''}}>
+                <div className="navbar" ref={navRef} style={{backgroundColor: isNavFixed ? '#58A540C0' : ''}}>
                     <Link to={"/"}>
-                        <img className={`logo logo-nav ${menuOpen ? 'opacity-0' : ''}`} src="/puro-cactus-logo.PNG"
+                        <img className={`logo logo-nav ${menuOpen ? 'opacity-0' : ''}`}
+                             src="/puro-cactus-light-orange.JPEG"
                              alt="LOGO"/>
                     </Link>
                     <nav className="nav">
@@ -106,7 +107,8 @@ const Layout = () => {
                                 <img src="/public/BDT-favicon.png" alt="logo-number"/>
                                 <p>Website created and maintained by
                                     <a href="https://barreddoortechnologies.com/" target="_blank"
-                                       rel="noopener noreferrer" className={"BDT-link"}> Barred Door Technologies</a></p>
+                                       rel="noopener noreferrer" className={"BDT-link"}> Barred Door Technologies</a>
+                                </p>
                             </div>
                         </div>
                     </div>
